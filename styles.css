@@ -2635,6 +2635,17 @@ html.light { background: #ffffff; }
     .bg-brand span { font-size: clamp(2.6rem, 13vw, 5rem); }
 }
 
+/* ===== Colour fixes =====
+   Experience badge: white-on-white bug -> red chip with white text */
+.light .experience-badge {
+    background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
+    border: none !important;
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(234, 26, 39, 0.35);
+}
+.light .experience-badge .badge-years,
+.light .experience-badge .badge-text { color: #ffffff !important; }
+
 
 
 
