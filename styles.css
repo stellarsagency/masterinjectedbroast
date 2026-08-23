@@ -432,25 +432,15 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .hero-banner {
     display: inline-block;
-    padding: 6px;
+    padding: 4px;
     margin-bottom: 22px;
     border-radius: 16px;
-    position: relative;
-    background: transparent;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--black), var(--black)) padding-box,
+        linear-gradient(135deg, var(--golden), var(--red)) border-box;
     box-shadow: 0 6px 24px rgba(212, 175, 55, 0.18);
     animation: bannerGlow 3s ease-in-out infinite;
-}
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    padding: 2px;
-    background: linear-gradient(135deg, var(--golden), var(--red));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
 }
 .hero-banner-img {
     display: block;
