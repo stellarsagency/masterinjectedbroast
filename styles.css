@@ -2259,6 +2259,314 @@ html.light { background: #f3f4f6; }
 .light #deals p,
 .light #menu p { color: var(--gray-light); }
 
+/* ============================================================
+   DUMX-STYLE FINAL THEME — full light fast-food redesign
+   Same look as dumxbroast.com: light gray bg, white rounded
+   cards with soft shadows, blue/red/yellow accents.
+   Hero = our own banner image (two-column layout).
+   ============================================================ */
+
+/* Page background */
+html.light { background: #f3f4f6; }
+.light .hero-bg { display: none; }
+.light .hero::after { display: none; }
+.light .scroll-indicator { display: none; }
+
+/* ---------- HERO (two-column, our banner image) ---------- */
+.light .hero {
+    min-height: auto;
+    padding: 150px 0 70px;
+    background: linear-gradient(180deg, #eef2f7 0%, #f3f4f6 100%);
+    display: block;
+}
+.light .hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.light .hero-content { max-width: 560px; flex: 1; padding: 0; }
+.light .hero-badge {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid var(--red);
+    border-radius: 999px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.light .hero-badge::before { background: var(--red); box-shadow: 0 0 8px rgba(234,26,39,0.6); }
+.light .badge-line-1 { color: #ea1a27; letter-spacing: 2px; font-size: 0.78rem; }
+.light .hero-title { margin-bottom: 22px; }
+.light .title-line .word { color: #111827; font-size: 3.4rem; letter-spacing: 1px; }
+.light .line-2 .word {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: #ea1a27;
+    color: #ea1a27;
+    filter: none;
+    font-size: 4.4rem;
+}
+.light .hero-subtitle { color: #4b5563; margin-bottom: 30px; }
+.light .hero-cta { gap: 14px; margin-bottom: 40px; }
+.light .btn { border-radius: 999px; padding: 15px 32px; }
+.light .btn-primary {
+    background: linear-gradient(135deg, #ea1a27, #c8101c);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(234,26,39,0.35);
+}
+.light .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(234,26,39,0.45); }
+.light .btn-secondary {
+    background: #ffffff;
+    border: 2px solid #0d5abf;
+    color: #0d5abf;
+    box-shadow: 0 6px 18px rgba(13,90,191,0.12);
+}
+.light .btn-secondary:hover { background: #0d5abf; color: #fff; transform: translateY(-3px); }
+.light .hero-stats { gap: 34px; }
+.light .stat-number { color: #0d5abf; font-weight: 700; }
+.light .stat-label { color: #6b7280; font-size: 0.85rem; }
+.light .stat-item { padding-top: 12px; position: relative; }
+.light .stat-item::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 28px; height: 3px;
+    background: #ffd400; border-radius: 2px;
+}
+
+.light .hero-media { flex: 1; position: relative; min-width: 0; }
+.light .hero-media-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(17, 24, 39, 0.18);
+}
+.light .hero-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    color: #111827;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    animation: chipFloat 3.5s ease-in-out infinite;
+}
+.light .hero-chip i { color: #ea1a27; }
+.light .chip-1 { top: 18px; left: -14px; }
+.light .chip-2 { bottom: 60px; right: -10px; animation-delay: 0.6s; }
+.light .chip-3 { bottom: -14px; left: 30px; animation-delay: 1.2s; }
+.light .chip-3 i { color: #0d5abf; }
+@keyframes chipFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* ---------- NAVBAR ---------- */
+.light .navbar { background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+.light .navbar.scrolled { background: rgba(255,255,255,0.98); }
+.light .logo-main { color: #111827; }
+.light .logo-sub { color: #ea1a27; letter-spacing: 4px; }
+.light .nav-links a { color: #374151; font-weight: 500; }
+.light .nav-links a:hover, .light .nav-links a.active { color: #ea1a27; }
+.light .nav-links a::after { background: #ea1a27; height: 2px; }
+.light .nav-right .order-btn {
+    background: linear-gradient(135deg, #ea1a27, #c8101c);
+    color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(234,26,39,0.3);
+}
+.light .hamburger span { background: #111827; }
+
+/* ---------- SECTION SCAFFOLD ---------- */
+.light .about,
+.light .specialties,
+.light .testimonials,
+.light .order,
+.light .gallery { background: #ffffff !important; }
+.light .faq { background: #f8fafc !important; }
+.light .loyalty { background: #ffffff !important; }
+.light .features-strip { background: #ffffff !important; border-bottom: 1px solid #eef0f3; }
+.light .section-title { color: #111827; }
+.light .section-subtitle { color: #6b7280; }
+.light p { color: #4b5563; }
+
+/* Section header accent bar */
+.light .section-header .section-title::after {
+    content: '';
+    display: block;
+    width: 64px; height: 4px;
+    margin: 14px auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ea1a27, #ffd400);
+}
+
+/* ---------- CARDS: white + rounded + soft shadow ---------- */
+.light .deal-card {
+    background: #ffffff !important;
+    border: 1px solid #eef0f3 !important;
+    border-radius: 20px;
+    backdrop-filter: none;
+    box-shadow: 0 8px 26px rgba(17,24,39,0.08);
+}
+.light .deal-card:hover { transform: translateY(-8px); box-shadow: 0 20px 45px rgba(17,24,39,0.14); }
+.light .deal-card.featured {
+    border: 2px solid #ea1a27 !important;
+    box-shadow: 0 14px 40px rgba(234,26,39,0.18);
+}
+.light .deal-card::after { display: none; }
+.light .menu-item {
+    background: #ffffff;
+    border: 1px solid #eef0f3;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(17,24,39,0.07);
+    transition: all 0.35s ease;
+}
+.light .menu-item:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(17,24,39,0.13); border-color: rgba(13,90,191,0.35); }
+.light .review-card {
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 18px;
+    backdrop-filter: none;
+    box-shadow: 0 8px 26px rgba(17,24,39,0.08);
+}
+.light .review-card:hover { box-shadow: 0 18px 40px rgba(17,24,39,0.13); }
+.light .review-text { color: #4b5563; }
+.light .review-name { color: #111827; }
+.light .review-role { color: #6b7280; }
+.light .review-card i.fa-star,
+.light .review-card .fas.fa-star { color: #ffb400 !important; }
+.light .contact-card { background: #f8fafc; border: 1px solid #eef0f3; border-radius: 16px; }
+.light .contact-card:hover { border-color: #0d5abf; box-shadow: 0 12px 30px rgba(13,90,191,0.1); }
+.light .card-icon { background: linear-gradient(135deg, #0d5abf, #0a4a9e); color: #fff; }
+.light .faq-item { background: #ffffff; border: 1px solid #eef0f3; border-radius: 14px; box-shadow: 0 4px 14px rgba(17,24,39,0.05); }
+.light .faq-item[open] { border-color: #0d5abf; box-shadow: 0 12px 30px rgba(13,90,191,0.1); }
+.light .faq-item summary { color: #111827; }
+.light .faq-item summary::after { color: #ea1a27; }
+.light .feature-card,
+.light .specialty-card { background: #ffffff; border: 1px solid #eef0f3; border-radius: 18px; box-shadow: 0 8px 26px rgba(17,24,39,0.07); }
+.light .experience-badge { background: #ffffff; border: 1px solid #eef0f3; border-radius: 16px; }
+.light .gallery-item { border-radius: 16px; }
+
+/* Price tags & ribbons -> yellow/red */
+.light .price-tag { background: #ffd400 !important; color: #111827 !important; border-radius: 999px; }
+.light .price-tag .amount { color: #111827; }
+.light .deal-ribbon { border-radius: 999px; }
+.light .deal-ribbon.featured-ribbon { background: #ea1a27; color: #fff; }
+.light .deal-ribbon.premium-ribbon { background: #111827; color: #ffd400; border-color: #111827; }
+
+/* Forms */
+.light .form-input,
+.light .form-textarea { background: #ffffff; border: 1px solid #d1d5db; border-radius: 12px; color: #111827; }
+.light .form-input:focus,
+.light .form-textarea:focus { border-color: #0d5abf; box-shadow: 0 0 0 3px rgba(13,90,191,0.12); }
+.light .form-label { color: #374151; }
+
+/* Loyalty banner -> yellow */
+.light .loyalty-banner,
+.light .loyalty-inner {
+    background: linear-gradient(135deg, #ffd400, #ffb800) !important;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(255,184,0,0.35);
+}
+.light .loyalty-text h3 { color: #111827; }
+.light .loyalty-text p { color: #4b3a00; }
+.light .loyalty-btn { background: #111827 !important; color: #ffd400 !important; border-radius: 999px; }
+
+/* CTA banner -> blue */
+.light .cta-banner { background: linear-gradient(135deg, #0d5abf, #0a4a9e) !important; }
+.light .cta-title { color: #ffffff; }
+.light .cta-text { color: rgba(255,255,255,0.92); }
+.light .cta-btn {
+    background: #ffd400 !important;
+    color: #111827 !important;
+    border-radius: 999px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Dish modal */
+.light .dish-modal-backdrop { background: rgba(17,24,39,0.55); }
+.light .dish-modal-card { background: #ffffff; border: none; border-radius: 20px; }
+.light .dish-modal-body h3 { color: #111827; }
+.light .dish-modal-body p { color: #4b5563; }
+
+/* Footer */
+.light .footer { background: #111827; }
+.light .footer, .light .footer a, .light .footer p, .light .footer li { color: #9ca3af; }
+.light .footer-title { color: #ffffff; }
+.light .footer-logo .logo-main { color: #ffffff; }
+.light .footer-logo .logo-sub { color: #ffd400; }
+.light .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* Chrome */
+.light .scroll-progress { background: linear-gradient(90deg, #ea1a27, #ffd400); }
+.light .back-to-top { background: #0d5abf; color: #fff; border-radius: 50%; }
+.light .mobile-order-bar { background: #ffffff; border-top: 1px solid #e5e7eb; box-shadow: 0 -6px 20px rgba(0,0,0,0.06); }
+.light .mobile-order-bar .mob-btn { color: #fff; border-radius: 999px; margin: 8px 6px; }
+.light .mob-call { background: linear-gradient(135deg, #0d5abf, #0a4a9e); }
+.light .preloader { background: #ffffff; }
+.light .loader-letter { color: #ea1a27; }
+.light .loader-progress { background: linear-gradient(90deg, #ea1a27, #ffd400, #ea1a27); }
+.light .drumstick-piece { background: #ea1a27; }
+
+/* ---------- PRODUCTS AREA NOW LIGHT TOO (same as dumx) ---------- */
+.light #deals,
+.light #menu {
+    --black: #ffffff;
+    --black-light: #f4f4f5;
+    --black-medium: #e8e8ea;
+    --black-dark: #dcdce0;
+    --white: #0a0a0a;
+    --gray: #6a7282;
+    --gray-light: #4b5563;
+    --gray-dark: #9aa1ab;
+    --golden: #0d5abf;
+    --golden-light: #3b82f6;
+    --golden-dark: #0a4a9e;
+    --golden-glow: rgba(13, 90, 191, 0.3);
+    --red: #ea1a27;
+    --gold-gradient: linear-gradient(135deg, #3b82f6 0%, #0d5abf 45%, #0a4a9e 100%);
+    --shadow-golden: 0 10px 40px rgba(13, 90, 191, 0.18);
+    background: #ffffff !important;
+}
+.light #deals { background: #f8fafc !important; }
+.light #deals .section-title,
+.light #menu .section-title { color: #111827; }
+.light #deals .section-subtitle,
+.light #menu .section-subtitle { color: #6b7280; }
+.light #deals p,
+.light #menu p { color: #4b5563; }
+.light .pieces-number { color: #ea1a27; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .light .hero-inner { flex-direction: column; gap: 36px; text-align: center; }
+    .light .hero-content { max-width: 100%; }
+    .light .hero-media { width: 100%; max-width: 480px; margin: 0 auto; }
+    .light .hero-cta { justify-content: center; }
+    .light .hero-stats { justify-content: center; }
+    .light .chip-1 { left: 0; }
+    .light .chip-2 { right: 0; }
+    .light .chip-3 { left: 12px; }
+}
+@media (max-width: 768px) {
+    .light .hero { padding: 120px 0 50px; }
+    .light .title-line .word { font-size: 2.6rem; }
+    .light .line-2 .word { font-size: 3.2rem; }
+}
+@media (max-width: 480px) {
+    .light .hero { padding: 108px 0 44px; }
+    .light .title-line .word { font-size: 2rem; }
+    .light .line-2 .word { font-size: 2.5rem; }
+    .light .hero-chip { font-size: 0.7rem; padding: 8px 12px; }
+}
+
 
 
 
