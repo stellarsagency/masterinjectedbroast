@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Injected Broast - Premium Fried Chicken</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="image3d.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-drumstick">
+                <div class="drumstick-piece"></div>
+                <div class="drumstick-piece"></div>
+                <div class="drumstick-piece"></div>
+            </div>
+            <div class="loader-text">
+                <span class="loader-letter" style="--i:0">M</span>
+                <span class="loader-letter" style="--i:1">A</span>
+                <span class="loader-letter" style="--i:2">S</span>
+                <span class="loader-letter" style="--i:3">T</span>
+                <span class="loader-letter" style="--i:4">E</span>
+                <span class="loader-letter" style="--i:5">R</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Effects -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon-wrapper">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 60 60" class="logo-svg">
+                            <circle cx="30" cy="30" r="28" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+                            <path d="M30 8 L35 25 L52 30 L35 35 L30 52 L25 35 L8 30 L25 25 Z" fill="url(#goldGradient)"/>
+                            <defs>
+                                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#d4af37"/>
+                                    <stop offset="50%" style="stop-color:#f4d03f"/>
+                                    <stop offset="100%" style="stop-color:#d4af37"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main">MASTER INJECTED</span>
+                    <span class="logo-sub">BROAST</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active" data-text="Home">Home</a>
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#specialties" class="nav-link" data-text="Specialties">Specialties</a>
+                <a href="#deals" class="nav-link" data-text="Deals">Deals</a>
+                <a href="#menu" class="nav-link" data-text="Menu">Menu</a>
+                <a href="#gallery" class="nav-link" data-text="Gallery">Gallery</a>
+                <a href="#testimonials" class="nav-link" data-text="Reviews">Reviews</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="#order" class="order-btn">
+                    <span class="btn-text">Order Now</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-bg-image"></div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-line-1">Premium Quality Since 2020</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line line-1">
+                    <span class="word">MASTER INJECTED</span>
+                </span>
+                <span class="title-line line-2">
+                    <span class="word gold-text">BROAST</span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Premium fried chicken, crafted with our signature 12-spice infusion technique. 
+                Every piece is marinated for 24 hours and fried to golden perfection.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#deals" class="btn btn-primary">
+                    <span class="btn-content">
+                        <span>View Our Deals</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+                <a href="#menu" class="btn btn-secondary">
+                    <span class="btn-content">
+                        <span>Explore Menu</span>
+                        <i class="fas fa-utensils"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15000">0</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-label">Daily Orders</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="4">0</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="strip-items">
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-pepper-hot"></i></div>
+                    <span>12 Secret Spices</span>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-fire"></i></div>
+                    <span>Perfectly Fried</span>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-certificate"></i></div>
+                    <span>100% Halal</span>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-truck-fast"></i></div>
+                    <span>Fast Delivery</span>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-icon"><i class="fas fa-leaf"></i></div>
+                    <span>Fresh Ingredients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-bg">
+            <div class="about-shape shape-1"></div>
+            <div class="about-shape shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="visual-wrapper">
+                        <div class="about-image-3d">
+                            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=800&q=80" alt="Fried Chicken Platter" class="about-main-img">
+                            <div class="about-img-shadow"></div>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="badge-years">4+</span>
+                            <span class="badge-text">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="content-header">
+                        <span class="section-tag"><i class="fas fa-star"></i> About Us</span>
+                        <h2 class="section-title">Why We're <span class="gold">Different</span></h2>
+                        <div class="title-decoration">
+                            <span class="deco-line"></span>
+                            <span class="deco-icon"><i class="fas fa-drumstick-bite"></i></span>
+                            <span class="deco-line"></span>
+                        </div>
+                    </div>
+                    <p class="about-lead">At Master Injected Broast, we don't just fry chicken - we craft an unforgettable culinary experience.</p>
+                    <p class="about-text">Our revolutionary injection technique ensures every piece is infused with our signature blend of 12 herbs and spices, creating a burst of flavor that distinguishes us from ordinary broast. Each piece undergoes a meticulous 24-hour marination process before being fried to golden perfection.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon"><i class="fas fa-pepper-hot"></i></div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>12 Secret Spices</h4>
+                                <p>Our proprietary blend of exotic herbs and spices</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon"><i class="fas fa-fire-alt"></i></div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Perfectly Fried</h4>
+                                <p>Golden crispy exterior with juicy interior</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon"><i class="fas fa-syringe"></i></div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Flavor Injection</h4>
+                                <p>Deep flavor infusion in every bite</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                            </div>
+                            <div class="feature-content">
+                                <h4>24-Hour Marination</h4>
+                                <p>Slow marination for maximum taste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="specialties" id="specialties">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-award"></i> What We Offer</span>
+                <h2 class="section-title">Our <span class="gold">Specialties</span></h2>
+                <p class="section-desc">Discover what makes our broast truly exceptional</p>
+            </div>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <div class="icon-bg"></div>
+                        <div class="icon-main"><i class="fas fa-syringe"></i></div>
+                    </div>
+                    <h3>Injection Technology</h3>
+                    <p>Our patented injection technique infuses flavor deep into every fiber of the chicken</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <div class="icon-bg"></div>
+                        <div class="icon-main"><i class="fas fa-blender"></i></div>
+                    </div>
+                    <h3>Signature Sauce</h3>
+                    <p>Our famous Fariz Dip Sauce is a perfect blend of 8 ingredients</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <div class="icon-bg"></div>
+                        <div class="icon-main"><i class="fas fa-mortar-pestle"></i></div>
+                    </div>
+                    <h3>Fresh Ground Spices</h3>
+                    <p>We grind our spices daily to ensure maximum freshness and aroma</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <div class="icon-bg"></div>
+                        <div class="icon-main"><i class="fas fa-temperature-high"></i></div>
+                    </div>
+                    <h3>Precision Frying</h3>
+                    <p>Perfect temperature control for that ideal golden crispiness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section class="deals" id="deals">
+        <div class="deals-bg">
+            <div class="deals-pattern"></div>
+            <div class="deals-glow glow-1"></div>
+            <div class="deals-glow glow-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-tags"></i> Special Offers</span>
+                <h2 class="section-title">Our Signature <span class="gold">Deals</span></h2>
+                <p class="section-desc">Choose from our carefully crafted deals, each designed to give you the ultimate broast experience</p>
+            </div>
+            <div class="deals-grid">
+                <!-- Quarter Deal -->
+                <div class="deal-card" data-deal="quarter">
+                    <div class="deal-ribbon"><span>Popular</span></div>
+                    <div class="deal-header">
+                        <div class="deal-image-3d">
+                            <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80" alt="Quarter Broast" class="deal-img">
+                            <div class="deal-img-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="deal-body">
+                        <h3 class="deal-name">Quarter Broast</h3>
+                        <div class="deal-tagline">Perfect for Solo Dining</div>
+                        <div class="deal-pieces">
+                            <span class="pieces-number">2</span>
+                            <span class="pieces-text">Pieces</span>
+                        </div>
+                        <ul class="deal-features">
+                            <li><i class="fas fa-check-circle"></i><span>2 Crispy Broast Pieces</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Signature Fariz Dip Sauce</span></li>
+                        </ul>
+                        <div class="deal-pricing">
+                            <div class="price-tag">
+                                <span class="currency">Rs</span>
+                                <span class="amount">499</span>
+                            </div>
+                            <span class="price-note">Only</span>
+                        </div>
+                        <a href="#order" class="deal-btn">
+                            <span class="btn-bg"></span>
+                            <span class="btn-content">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Half Deal -->
+                <div class="deal-card featured" data-deal="half">
+                    <div class="deal-ribbon featured-ribbon"><span>Most Popular</span></div>
+                    <div class="deal-header">
+                        <div class="deal-image-3d">
+                            <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=400&q=80" alt="Half Broast" class="deal-img">
+                            <div class="deal-img-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="deal-body">
+                        <h3 class="deal-name">Half Broast</h3>
+                        <div class="deal-tagline">Best Value Choice</div>
+                        <div class="deal-pieces">
+                            <span class="pieces-number">4</span>
+                            <span class="pieces-text">Pieces</span>
+                        </div>
+                        <ul class="deal-features">
+                            <li><i class="fas fa-check-circle"></i><span>4 Crispy Broast Pieces</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>1 Freshly Baked Ban</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Signature Fariz Dip Sauce</span></li>
+                        </ul>
+                        <div class="deal-pricing">
+                            <div class="price-tag">
+                                <span class="currency">Rs</span>
+                                <span class="amount">899</span>
+                            </div>
+                            <span class="price-note">Save Rs 100</span>
+                        </div>
+                        <a href="#order" class="deal-btn featured-btn">
+                            <span class="btn-bg"></span>
+                            <span class="btn-content">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Full Deal -->
+                <div class="deal-card" data-deal="full">
+                    <div class="deal-ribbon premium-ribbon"><span>Premium</span></div>
+                    <div class="deal-header">
+                        <div class="deal-image-3d">
+                            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&q=80" alt="Full Broast" class="deal-img">
+                            <div class="deal-img-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="deal-body">
+                        <h3 class="deal-name">Full Broast</h3>
+                        <div class="deal-tagline">Family Feast Special</div>
+                        <div class="deal-pieces">
+                            <span class="pieces-number">8</span>
+                            <span class="pieces-text">Pieces</span>
+                        </div>
+                        <ul class="deal-features">
+                            <li><i class="fas fa-check-circle"></i><span>8 Crispy Broast Pieces</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>2 Freshly Baked Bans</span></li>
+                            <li><i class="fas fa-check-circle"></i><span>Signature Fariz Dip Sauce</span></li>
+                        </ul>
+                        <div class="deal-pricing">
+                            <div class="price-tag">
+                                <span class="currency">Rs</span>
+                                <span class="amount">1799</span>
+                            </div>
+                            <span class="price-note">Save Rs 300</span>
+                        </div>
+                        <a href="#order" class="deal-btn">
+                            <span class="btn-bg"></span>
+                            <span class="btn-content">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-drumstick-bite"></i> Our Menu</span>
+                <h2 class="section-title">Premium <span class="gold">Broast</span> Selection</h2>
+                <p class="section-desc">We specialize in one thing and we do it perfectly - authentic broast chicken</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item" data-category="broast">
+                    <div class="menu-img-3d">
+                        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80" alt="Classic Broast" class="menu-img">
+                    </div>
+                    <div class="item-content">
+                        <h4>Classic Broast</h4>
+                        <p>Original recipe with our signature 12-spice blend</p>
+                        <div class="item-price">Rs 449</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="broast">
+                    <div class="menu-img-3d">
+                        <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=400&q=80" alt="Spicy Broast" class="menu-img">
+                    </div>
+                    <div class="item-content">
+                        <h4>Spicy Broast</h4>
+                        <p>Extra hot for the brave-hearted</p>
+                        <div class="item-price">Rs 499</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="broast">
+                    <div class="menu-img-3d">
+                        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400&q=80" alt="Broast Wings" class="menu-img">
+                    </div>
+                    <div class="item-content">
+                        <h4>Broast Wings</h4>
+                        <p>Crispy wings with our signature Fariz dip sauce</p>
+                        <div class="item-price">Rs 349</div>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="broast">
+                    <div class="menu-img-3d">
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&q=80" alt="Family Broast Platter" class="menu-img">
+                    </div>
+                    <div class="item-content">
+                        <h4>Family Broast Platter</h4>
+                        <p>8 pieces with bans and signature dip sauce</p>
+                        <div class="item-price">Rs 1799</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-camera-retro"></i> Gallery</span>
+                <h2 class="section-title">Visual <span class="gold">Feast</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gi-1">
+                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&q=80" alt="Premium Broast Platter" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Premium Broast Platter</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-2">
+                    <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=400&q=80" alt="Crispy Perfection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Crispy Perfection</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-3">
+                    <img src="https://images.unsplash.com/photo-1472476443508-c78b7146f553?w=400&q=80" alt="Signature Sauce" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Signature Sauce</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-4">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80" alt="Family Deal" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Family Deal</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-5">
+                    <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80" alt="Our Kitchen" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Our Kitchen</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-6">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Happy Customers" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span>Happy Customers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-quote-left"></i> Customer Reviews</span>
+                <h2 class="section-title">What People <span class="gold">Say</span></h2>
+                <p class="section-desc">Real reviews from our valued customers across the city</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "The best broast I've ever had! The injection technique makes every bite burst with flavor. The Fariz dip sauce is absolutely addictive!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <h5>Ahmed Khan</h5>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "The Half Broast deal is incredible value! My whole family loves it. The chicken is always fresh and perfectly crispy."
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">SA</div>
+                        <div class="author-info">
+                            <h5>Sara Ali</h5>
+                            <span>Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Consistent quality every time! The Full Broast deal is perfect for our family gatherings. Highly recommended!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">MU</div>
+                        <div class="author-info">
+                            <h5>Muhammad Usman</h5>
+                            <span>Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "I've tried broast from many places, but Master Injected is in a league of its own. The flavor is unmatched!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">FK</div>
+                        <div class="author-info">
+                            <h5>Fatima Khan</h5>
+                            <span>College Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <div class="cta-content">
+                <span class="cta-tag"><i class="fas fa-fire"></i> Fresh & Hot Daily</span>
+                <h2 class="cta-title">Hungry for <span class="gold">Perfection?</span></h2>
+                <p class="cta-text">Order your favorite broast deal now and taste the difference that 24-hour marination makes. Delivered hot, crispy, and bursting with flavor.</p>
+                <a href="#order" class="btn btn-primary cta-btn">
+                    <span class="btn-content"><span>Order Now</span><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order">
+        <div class="container">
+            <div class="order-grid">
+                <div class="order-info">
+                    <div class="info-header">
+                        <span class="section-tag"><i class="fas fa-phone-alt"></i> Contact Us</span>
+                        <h2 class="section-title">Ready to <span class="gold">Order</span>?</h2>
+                    </div>
+                    <p class="order-lead">Call us now or fill out the form to place your order. We deliver hot and fresh broast right to your doorstep!</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h5>Visit Us</h5>
+                                <p>Main Boulevard, Gulberg III, Lahore</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h5>Call Us</h5>
+                                <p>+92 300 1234567</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h5>Opening Hours</h5>
+                                <p>12:00 PM - 12:00 AM (Daily)</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h5>Email Us</h5>
+                                <p>info@masterbroast.pk</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-form-wrapper">
+                    <div class="form-header">
+                        <h3><i class="fas fa-shopping-bag"></i> Place Your Order</h3>
+                    </div>
+                    <form id="orderForm" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="name" placeholder="Your Full Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-shopping-cart"></i>
+                                <select id="deal" required>
+                                    <option value="" disabled selected>Select a Deal</option>
+                                    <option value="quarter">Quarter Broast - 2 Pcs - Rs 499</option>
+                                    <option value="half">Half Broast - 4 Pcs - Rs 899</option>
+                                    <option value="full">Full Broast - 8 Pcs - Rs 1799</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <textarea id="address" rows="3" placeholder="Delivery Address" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment"></i>
+                                <textarea id="notes" rows="2" placeholder="Special Instructions (Optional)"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-content">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Place Order</span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,0 L0,0 Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 60 60" class="logo-svg">
+                                <circle cx="30" cy="30" r="28" fill="none" stroke="url(#goldGradient2)" stroke-width="2"/>
+                                <path d="M30 8 L35 25 L52 30 L35 35 L30 52 L25 35 L8 30 L25 25 Z" fill="url(#goldGradient2)"/>
+                                <defs>
+                                    <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#d4af37"/>
+                                        <stop offset="50%" style="stop-color:#f4d03f"/>
+                                        <stop offset="100%" style="stop-color:#d4af37"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">MASTER INJECTED</span>
+                            <span class="logo-sub">BROAST</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">Crafting the perfect broast chicken since 2020. Every piece tells a story of flavor, quality, and passion for great food.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#deals">Special Deals</a></li>
+                        <li><a href="#menu">Full Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main Boulevard, Gulberg III, Lahore, Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@masterbroast.pk</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>12:00 PM - 12:00 AM (Daily)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Thursday</span><span>12 PM - 11 PM</span></li>
+                        <li><span>Friday - Saturday</span><span>12 PM - 12 AM</span></li>
+                        <li><span>Sunday</span><span>12 PM - 11 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Master Injected Broast. All Rights Reserved.</p>
+                    <p class="footer-tagline">Injected with Flavor, Fried to Perfection!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

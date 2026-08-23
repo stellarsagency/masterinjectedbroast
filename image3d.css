@@ -1,0 +1,459 @@
+﻿/* ============================================
+   IMAGE 3D EFFECTS - Real Photos with Depth
+   ============================================ */
+
+/* ===== Hero Image 3D ===== */
+.hero-image-3d {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 5;
+    perspective: 1000px;
+}
+
+.image-3d-wrapper {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    transform-style: preserve-3d;
+    animation: heroImageFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroImageFloat {
+    0%, 100% { transform: translateY(0) rotateY(-5deg) rotateX(5deg); }
+    50% { transform: translateY(-20px) rotateY(5deg) rotateX(-5deg); }
+}
+
+.broast-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 15px 30px rgba(0, 0, 0, 0.3),
+        inset 0 0 100px rgba(212, 175, 55, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.image-3d-wrapper:hover .broast-hero-img {
+    transform: scale(1.05) translateZ(30px);
+}
+
+.image-3d-shadow {
+    position: absolute;
+    bottom: -40px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.4), transparent 70%);
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: rotateX(80deg);
+}
+
+.image-3d-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 30%, 
+        transparent 50%, 
+        rgba(255, 255, 255, 0.05) 70%, 
+        transparent 100%);
+    border-radius: 30px;
+    pointer-events: none;
+    animation: reflectionMove 4s ease-in-out infinite;
+}
+
+@keyframes reflectionMove {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+/* ===== Floating Food Items ===== */
+.floating-food {
+    position: absolute;
+    z-index: 4;
+    animation: floatingFood 5s ease-in-out infinite;
+}
+
+.food-1 {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.food-2 {
+    bottom: 20%;
+    left: 5%;
+    animation-delay: -2s;
+}
+
+.food-3 {
+    top: 20%;
+    right: 35%;
+    animation-delay: -4s;
+}
+
+.food-img-3d {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.food-img-3d:hover {
+    transform: scale(1.15) rotate(10deg);
+}
+
+@keyframes floatingFood {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(5deg); }
+    75% { transform: translateY(10px) rotate(-5deg); }
+}
+
+/* ===== Hero Glow Effects ===== */
+.hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.glow-golden {
+    top: 20%;
+    right: 15%;
+    width: 400px;
+    height: 400px;
+    background: rgba(212, 175, 55, 0.15);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+.glow-red {
+    bottom: 20%;
+    left: 10%;
+    width: 350px;
+    height: 350px;
+    background: rgba(196, 30, 58, 0.1);
+    animation: glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* ===== About Image 3D ===== */
+.about-image-3d {
+    position: relative;
+    perspective: 800px;
+}
+.about-image-3d::before {
+    content: '';
+    position: absolute;
+    top: -18px; left: -18px;
+    width: 120px; height: 120px;
+    border-top: 2px solid var(--golden);
+    border-left: 2px solid var(--golden);
+    border-radius: 4px 0 0 0;
+    z-index: 3;
+    opacity: 0.7;
+}
+.about-image-3d::after {
+    content: '';
+    position: absolute;
+    bottom: -18px; right: -18px;
+    width: 120px; height: 120px;
+    border-bottom: 2px solid var(--golden);
+    border-right: 2px solid var(--golden);
+    border-radius: 0 0 4px 0;
+    z-index: 3;
+    opacity: 0.7;
+}
+
+.about-main-img {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.5),
+        0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotateY(-5deg) rotateX(5deg);
+}
+
+.about-main-img:hover {
+    transform: rotateY(5deg) rotateX(-5deg) scale(1.02);
+    box-shadow: 
+        0 50px 100px rgba(0, 0, 0, 0.6),
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(212, 175, 55, 0.2);
+}
+
+.about-img-shadow {
+    position: absolute;
+    bottom: -30px;
+    left: 5%;
+    width: 90%;
+    height: 50px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3), transparent 70%);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.about-img-glow {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3), transparent);
+    border-radius: 50%;
+    filter: blur(30px);
+    animation: aboutGlow 3s ease-in-out infinite;
+}
+
+@keyframes aboutGlow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ===== Deal Card Images 3D ===== */
+.deal-image-3d {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    perspective: 800px;
+}
+
+.deal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+}
+
+.deal-card:hover .deal-img {
+    transform: scale(1.1) translateZ(20px);
+}
+
+.deal-img-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, var(--black-light), transparent);
+    pointer-events: none;
+}
+
+/* ===== Menu Item Images 3D ===== */
+.menu-img-3d {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    perspective: 600px;
+}
+
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:hover .menu-img {
+    transform: scale(1.15) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Gallery Images 3D ===== */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    perspective: 1000px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1) rotateY(10deg) translateZ(30px);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay span {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--golden);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== 3D Image Card Effect ===== */
+.img-3d-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.img-3d-card:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) translateZ(20px);
+}
+
+.img-3d-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ===== Image Shine Effect ===== */
+.image-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.image-shine:hover::after {
+    left: 100%;
+}
+
+/* ===== 3D Depth Effect ===== */
+.depth-3d {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.depth-3d::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: inherit;
+    z-index: -1;
+    transform: translateZ(-20px);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 1024px) {
+    .hero-image-3d {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 40px;
+    }
+    
+    .image-3d-wrapper {
+        width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+    
+    .floating-food {
+        display: none;
+    }
+    
+    .hero-glow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-3d-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .about-main-img {
+        height: 300px;
+    }
+    
+    .deal-image-3d {
+        height: 180px;
+    }
+    
+    .menu-img-3d {
+        height: 150px;
+    }
+}
+
+/* ===== Image Loading Animation ===== */
+.img-loading {
+    background: linear-gradient(90deg, var(--black-light) 25%, var(--black-medium) 50%, var(--black-light) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ===== Image Reveal on Scroll ===== */
+.img-reveal {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-reveal.revealed {
+    clip-path: inset(0 0 0 0);
+}
+
