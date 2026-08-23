@@ -2276,7 +2276,7 @@ html.light { background: #f3f4f6; }
 .light .hero {
     min-height: auto;
     padding: 150px 0 70px;
-    background: linear-gradient(180deg, #eef2f7 0%, #f3f4f6 100%);
+    background: #ffffff;
     display: block;
 }
 .light .hero-inner {
@@ -2298,7 +2298,7 @@ html.light { background: #f3f4f6; }
 .light .hero-badge::before { background: var(--red); box-shadow: 0 0 8px rgba(234,26,39,0.6); }
 .light .badge-line-1 { color: #ea1a27; letter-spacing: 2px; font-size: 0.78rem; }
 .light .hero-title { margin-bottom: 22px; }
-.light .title-line .word { color: #111827; font-size: 3.4rem; letter-spacing: 1px; }
+.light .title-line .word { color: #111827; font-size: 3.6rem; letter-spacing: 1px; }
 .light .line-2 .word {
     background: none;
     -webkit-background-clip: initial;
@@ -2306,7 +2306,7 @@ html.light { background: #f3f4f6; }
     -webkit-text-fill-color: #ea1a27;
     color: #ea1a27;
     filter: none;
-    font-size: 4.4rem;
+    font-size: 4.8rem;
 }
 .light .hero-subtitle { color: #4b5563; margin-bottom: 30px; }
 .light .hero-cta { gap: 14px; margin-bottom: 40px; }
