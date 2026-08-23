@@ -384,7 +384,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-    filter: brightness(0.5) contrast(1.1);
+    filter: brightness(0.68) contrast(1.05);
     transform: scale(1.08);
     transition: transform 0.4s ease-out;
 }
@@ -393,9 +393,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: linear-gradient(90deg, 
-        rgba(5, 5, 5, 0.95) 0%, 
-        rgba(5, 5, 5, 0.8) 40%, 
-        rgba(5, 5, 5, 0.4) 100%);
+        rgba(5, 5, 5, 0.82) 0%, 
+        rgba(5, 5, 5, 0.6) 45%, 
+        rgba(5, 5, 5, 0.35) 100%);
 }
 
 /* Hero Content */
@@ -1860,7 +1860,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     .footer-links, .footer-contact, .footer-hours { display: inline-block; text-align: center; }
     .footer-bottom-content { flex-direction: column; gap: 10px; text-align: center; }
     .hero-cta { flex-direction: column; align-items: center; }
-    .hero-content { padding: 0 20px; }
+    .hero-content { padding: 100px 20px 40px; }
+    .navbar { padding: 22px 0; }
+    .hero-badge { margin-bottom: 26px; }
     .about-content { padding-left: 0; }
     .about-image-3d::before, .about-image-3d::after { display: none; }
     .experience-badge { padding: 13px 18px; }
@@ -1879,17 +1881,19 @@ input, textarea, select { font-family: inherit; outline: none; }
     .hero-bg-image { background-attachment: scroll; }
 }
 @media (max-width: 480px) {
-    .word { font-size: 2rem; }
-    .line-2 .word { font-size: 2.5rem; }
+    .word { font-size: 1.9rem; }
+    .line-2 .word { font-size: 2.3rem; }
     .section-title { font-size: 1.8rem; }
-    .hero-badge { padding: 8px 18px; }
-    .badge-line-1 { font-size: 0.6rem; letter-spacing: 2px; }
+    .hero-badge { padding: 10px 20px; margin-bottom: 22px; }
+    .badge-line-1 { font-size: 0.7rem; letter-spacing: 2.5px; }
     .stat-number { font-size: 1.5rem; }
     .deal-body { padding: 22px 18px; }
     .pieces-number { font-size: 2.5rem; }
     .price-tag .amount { font-size: 2.5rem; }
     .review-text { font-size: 0.95rem; }
     .hero-stats { gap: 16px; }
+    .hero-content { padding: 92px 16px 30px; }
+    .navbar { padding: 18px 0; }
     .stat-item { padding-top: 14px; }
     .hero::after { width: 360px; height: 360px; left: 50%; top: 38%; }
     .logo-main { font-size: 0.82rem; }
