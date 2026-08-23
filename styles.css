@@ -2646,6 +2646,159 @@ html.light { background: #ffffff; }
 .light .experience-badge .badge-years,
 .light .experience-badge .badge-text { color: #ffffff !important; }
 
+/* ============================================================
+   SIGNATURE DEALS — premium card redesign
+   ============================================================ */
+.light .deals-grid { gap: 36px; }
+
+.light .deal-card {
+    background: #ffffff;
+    border-radius: 26px;
+    box-shadow: 0 8px 24px rgba(17,24,39,0.07), 0 2px 6px rgba(17,24,39,0.05);
+    transition: transform 0.5s cubic-bezier(0.22, 1.2, 0.36, 1), box-shadow 0.5s ease;
+}
+.light .deal-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ea1a27, #ffd400);
+    border-radius: 26px 26px 0 0;
+    z-index: 8;
+}
+.light .deal-card:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 32px 64px rgba(234, 26, 39, 0.20);
+}
+.light .deal-card.featured {
+    transform: scale(1.035);
+    box-shadow: 0 0 0 3px #ffd400, 0 24px 55px rgba(234, 26, 39, 0.22);
+}
+.light .deal-card.featured:hover {
+    transform: scale(1.035) translateY(-14px);
+    box-shadow: 0 0 0 3px #ffd400, 0 36px 70px rgba(234, 26, 39, 0.28);
+}
+
+/* Image */
+.light .deal-header { height: 235px; }
+.light .deal-header::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 85px;
+    background: linear-gradient(180deg, rgba(255,255,255,0), #ffffff);
+    z-index: 5;
+}
+.light .deal-img { transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.light .deal-card:hover .deal-img { transform: scale(1.1) rotate(-1.5deg); }
+
+/* Ribbons */
+.light .deal-ribbon {
+    padding: 8px 18px;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    z-index: 9;
+    background: #ffd400;
+    color: #111827;
+}
+.light .deal-ribbon.featured-ribbon {
+    background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+.light .deal-ribbon.premium-ribbon {
+    background: #111827 !important;
+    color: #ffd400 !important;
+    border: none !important;
+}
+
+/* Body */
+.light .deal-body { padding: 30px 28px 32px; text-align: center; position: relative; z-index: 6; }
+.light .deal-name { font-size: 1.55rem; letter-spacing: 0.5px; color: #111827; }
+.light .deal-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9aa1ab;
+    margin: 6px 0 18px;
+}
+.light .deal-pieces {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(234, 26, 39, 0.06);
+    border: 1px dashed rgba(234, 26, 39, 0.35);
+    padding: 12px 34px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+}
+.light .pieces-number { font-size: 2.8rem; line-height: 1; color: #ea1a27; }
+.light .pieces-text { font-size: 0.7rem; letter-spacing: 2.5px; text-transform: uppercase; color: #6b7280; margin-top: 4px; }
+.light .deal-features { display: flex; flex-direction: column; gap: 8px; margin: 0 0 20px; padding: 0; text-align: left; }
+.light .deal-features li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fb;
+    border-radius: 10px;
+    padding: 9px 14px;
+    font-size: 0.92rem;
+    color: #374151;
+}
+.light .deal-features li i { color: #ea1a27; }
+
+/* Pricing */
+.light .deal-pricing { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 22px; }
+.light .price-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    background: linear-gradient(135deg, #ffd400, #ffb800) !important;
+    border: 3px solid #ffffff;
+    border-radius: 999px;
+    padding: 8px 24px;
+    box-shadow: 0 12px 26px rgba(255, 184, 0, 0.45);
+}
+.light .price-tag .currency { font-size: 0.95rem; font-weight: 700; color: #111827; }
+.light .price-tag .amount { font-size: 2.3rem; font-weight: 800; color: #111827; line-height: 1; }
+.light .price-note { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #9aa1ab; }
+
+/* Order button with shine sweep */
+.light .deal-btn {
+    width: 100%;
+    justify-content: center;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
+    color: #ffffff !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(234, 26, 39, 0.35);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.light .deal-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 38px rgba(234, 26, 39, 0.45); }
+.light .deal-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
+}
+.light .deal-btn:hover::after { left: 130%; }
+.light .deal-btn .btn-bg { display: none; }
+.light .deal-btn .btn-content { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 10px; color: #fff; }
+.light .deal-btn .btn-content i { transition: transform 0.3s ease; }
+.light .deal-btn:hover .btn-content i { transform: translateX(4px); }
+
+@media (max-width: 768px) {
+    .light .deal-card.featured, .light .deal-card.featured:hover { transform: none; }
+    .light .deal-header { height: 210px; }
+}
+
 
 
 
