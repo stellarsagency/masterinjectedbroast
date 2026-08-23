@@ -383,7 +383,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     background-image: url('images/img_6a876c271badb2.95726053.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     filter: brightness(0.5) contrast(1.1);
     transform: scale(1.08);
     transition: transform 0.4s ease-out;
