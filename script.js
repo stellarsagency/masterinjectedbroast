@@ -214,7 +214,7 @@ if (heroSection && heroBg && heroContent) {
 
 // ===== Scroll Reveal Animation =====
 function revealOnScroll() {
-    const elements = document.querySelectorAll('.feature-card, .specialty-card, .deal-card, .menu-item, .gallery-item, .contact-card, .testimonial');
+    const elements = document.querySelectorAll('.feature-card, .specialty-card, .deal-card, .menu-item, .gallery-item, .contact-card, .review-card, .section-header, .faq-item, .map-wrap, .loyalty-inner');
     
     elements.forEach((el, index) => {
         const rect = el.getBoundingClientRect();
@@ -230,7 +230,7 @@ function revealOnScroll() {
 }
 
 // Initialize elements for scroll reveal
-document.querySelectorAll('.feature-card, .specialty-card, .deal-card, .menu-item, .gallery-item, .contact-card').forEach(el => {
+document.querySelectorAll('.feature-card, .specialty-card, .deal-card, .menu-item, .gallery-item, .contact-card, .review-card, .section-header, .faq-item, .map-wrap, .loyalty-inner').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -291,6 +291,52 @@ if (orderForm) {
         style.textContent = '@keyframes successPop { 0% { transform: scale(0); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }';
         document.head.appendChild(style);
     });
+}
+
+// ===== Mobile Order Bar =====
+const mobBar = document.getElementById('mobileOrderBar');
+if (mobBar) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) mobBar.classList.add('visible');
+        else mobBar.classList.remove('visible');
+    });
+}
+
+// ===== Dish Quick-View Modal =====
+const dishModal = document.getElementById('dishModal');
+if (dishModal) {
+    const dishImg = document.getElementById('dishImg');
+    const dishName = document.getElementById('dishName');
+    const dishDesc = document.getElementById('dishDesc');
+    const dishPrice = document.getElementById('dishPrice');
+    const dishOrder = document.getElementById('dishOrder');
+
+    function closeDish() {
+        dishModal.classList.remove('open');
+        dishModal.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            const img = item.querySelector('.menu-img');
+            const name = item.querySelector('h4').textContent;
+            const desc = item.querySelector('p').textContent;
+            const price = item.querySelector('.item-price').textContent;
+            dishImg.src = img ? img.src : '';
+            dishImg.alt = name;
+            dishName.textContent = name;
+            dishDesc.textContent = desc;
+            dishPrice.textContent = price;
+            dishOrder.href = 'https://wa.me/923001234567?text=' +
+                encodeURIComponent('Hello Master Injected Broast! I want to order: ' + name + ' (' + price + ')');
+            dishModal.classList.add('open');
+            dishModal.setAttribute('aria-hidden', 'false');
+        });
+    });
+
+    dishModal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeDish));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDish(); });
 }
 
 // ===== Parallax on Hero =====

@@ -1880,6 +1880,154 @@ input, textarea, select { font-family: inherit; outline: none; }
     .about, .specialties, .deals, .menu, .gallery, .testimonials, .order { padding: 55px 0; }
 }
 
+/* ===== Mobile Order Bar ===== */
+.mobile-order-bar {
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    display: none;
+    z-index: 900;
+    background: rgba(5, 5, 5, 0.96);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    transform: translateY(120%);
+    transition: transform 0.35s ease;
+}
+.mobile-order-bar.visible { transform: translateY(0); }
+.mob-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 10px;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+.mob-call { background: linear-gradient(135deg, var(--red), var(--red-dark)); }
+
+/* ===== Map ===== */
+.map-wrap {
+    margin-top: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+.map-wrap iframe {
+    width: 100%; height: 280px; border: 0; display: block;
+    filter: grayscale(0.3) contrast(1.05);
+}
+
+/* ===== FAQ ===== */
+.faq { padding: 120px 0; background: var(--black-light); position: relative; overflow: hidden; }
+.faq-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.faq-item {
+    background: rgba(12, 12, 12, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 14px;
+    padding: 0 24px;
+    transition: var(--transition);
+}
+.faq-item[open] { border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 12px 35px rgba(212, 175, 55, 0.12); }
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 0;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: '\f067';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--golden);
+    transition: transform 0.3s;
+}
+.faq-item[open] summary::after { content: '\f068'; }
+.faq-item p { padding: 0 0 22px; color: var(--gray-light); line-height: 1.8; }
+
+/* ===== Dish Modal ===== */
+.dish-modal {
+    position: fixed; inset: 0;
+    z-index: 5000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.dish-modal.open { display: flex; }
+.dish-modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(4px); }
+.dish-modal-card {
+    position: relative;
+    z-index: 2;
+    width: 100%; max-width: 460px;
+    background: linear-gradient(160deg, rgba(20, 20, 20, 0.96), rgba(12, 12, 12, 0.96));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    animation: modalPop 0.35s ease;
+}
+@keyframes modalPop { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.dish-modal-close {
+    position: absolute; top: 14px; right: 14px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    font-size: 1rem;
+    z-index: 3;
+}
+.dish-modal-img { width: 100%; height: 240px; object-fit: cover; display: block; }
+.dish-modal-body { padding: 26px 28px 30px; }
+.dish-modal-body h3 { font-family: var(--font-display); font-size: 1.6rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.dish-modal-body p { color: var(--gray-light); line-height: 1.7; margin-bottom: 18px; }
+.dish-modal-price { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--golden); margin-bottom: 22px; }
+.dish-modal-body .btn { width: 100%; justify-content: center; }
+
+/* ===== Loyalty Banner ===== */
+.loyalty-banner { padding: 30px 0; }
+.loyalty-inner {
+    display: flex; align-items: center; gap: 25px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(196, 30, 58, 0.10));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 18px;
+    padding: 30px 35px;
+    flex-wrap: wrap;
+}
+.loyalty-icon {
+    width: 64px; height: 64px; flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--golden), var(--golden-dark));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--black); font-size: 1.6rem;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+.loyalty-text { flex: 1; min-width: 200px; }
+.loyalty-text h3 { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.loyalty-text p { color: var(--gray-light); }
+.loyalty-btn { white-space: nowrap; }
+
+@media (max-width: 768px) {
+    .mobile-order-bar { display: flex; }
+    .footer { padding-bottom: 90px; }
+    .loyalty-inner { flex-direction: column; text-align: center; }
+    .faq { padding: 70px 0; }
+    .faq-item summary { font-size: 1rem; }
+}
+
 
 
 
