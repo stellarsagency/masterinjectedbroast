@@ -2086,6 +2086,179 @@ input, textarea, select { font-family: inherit; outline: none; }
     .map-wrap iframe { height: 200px; }
 }
 
+/* ============================================================
+   LIGHT THEME (dumxbroast-style) — applied via <html class="light">
+   Everything flips to a light, blue/red/yellow fast-food look,
+   EXCEPT the products area (#deals, #menu) which stays dark/gold.
+   ============================================================ */
+.light {
+    --black: #ffffff;
+    --black-light: #f4f4f5;
+    --black-medium: #e8e8ea;
+    --black-dark: #dcdce0;
+    --white: #0a0a0a;
+    --gray: #6a7282;
+    --gray-light: #4b5563;
+    --gray-dark: #9aa1ab;
+    --golden: #0d5abf;
+    --golden-light: #3b82f6;
+    --golden-dark: #0a4a9e;
+    --golden-glow: rgba(13, 90, 191, 0.3);
+    --red: #ea1a27;
+    --red-light: #f0424f;
+    --red-dark: #b3121d;
+    --red-glow: rgba(234, 26, 39, 0.3);
+    --gold-gradient: linear-gradient(135deg, #3b82f6 0%, #0d5abf 45%, #0a4a9e 100%);
+    --gold-gradient-soft: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(13,90,191,0.05));
+    --shadow-grass: 0 10px 40px rgba(13, 90, 191, 0.18);
+    --shadow-golden: 0 10px 40px rgba(13, 90, 191, 0.18);
+}
+html.light { background: #f3f4f6; }
+.light .bg-cinematic,
+.light .bg-overlay { display: none; }
+
+/* Navbar */
+.light .navbar { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); box-shadow: 0 2px 14px rgba(0,0,0,0.08); }
+.light .navbar.scrolled { background: rgba(255,255,255,0.97); }
+.light .logo-main { color: #0a0a0a; }
+.light .logo-sub { color: var(--golden); }
+.light .nav-links a { color: #1f2937; }
+.light .nav-links a:hover { color: var(--golden); }
+.light .nav-links a::after { background: var(--golden); }
+.light .hamburger span { background: #0a0a0a; }
+
+/* Buttons */
+.light .btn { color: #ffffff; }
+.light .btn-primary { background: var(--golden); color: #fff; }
+.light .btn-secondary { background: transparent; border: 1px solid var(--golden); color: var(--golden); }
+.light .btn-secondary:hover { background: var(--golden); color: #fff; }
+
+/* Hero */
+.light .hero { background: #ffffff; }
+.light .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.35) 100%); }
+.light .hero-title { text-shadow: none; }
+.light .hero-subtitle { color: #4b5563; }
+.light .hero-badge { background: rgba(13,90,191,0.08); border-color: rgba(13,90,191,0.25); }
+.light .hero-badge .badge-line-1 { color: var(--golden-light); }
+.light .hero-stats .stat-label { color: #6a7282; }
+.light .hero::after { background: radial-gradient(circle, rgba(13,90,191,0.12), transparent 70%); }
+
+/* Section backgrounds */
+.light .about,
+.light .specialties,
+.light .testimonials,
+.light .order,
+.light .gallery,
+.light .faq,
+.light .loyalty,
+.light .features-strip { background: #ffffff !important; }
+.light .section-subtitle { color: #6a7282; }
+.light .section-title { color: #0a0a0a; }
+.light p { color: #374151; }
+
+/* About */
+.light .about-text { color: #374151; }
+.light .experience-badge { background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.light .experience-badge .badge-years { color: var(--golden); }
+.light .about-image-3d { border-color: var(--golden); }
+
+/* Feature / specialty cards */
+.light .feature-card,
+.light .specialty-card { background: #f7f8fa; border: 1px solid #e5e7eb; }
+.light .feature-card:hover,
+.light .specialty-card:hover { border-color: var(--golden); }
+
+/* Testimonials */
+.light .review-card {
+    background: linear-gradient(#ffffff,#ffffff) padding-box,
+                linear-gradient(135deg, var(--golden-light), rgba(13,90,191,0.25) 45%, transparent 75%) border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.light .review-text { color: #374151; }
+.light .review-name { color: #0a0a0a; }
+.light .review-role { color: #6a7282; }
+
+/* Contact / Order form */
+.light .contact-card { background: #f7f8fa; border: 1px solid #e5e7eb; }
+.light .contact-card:hover { border-color: var(--golden); }
+.light .form-input,
+.light .form-textarea { background: #ffffff; border: 1px solid #d1d5db; color: #111827; }
+.light .form-input:focus,
+.light .form-textarea:focus { border-color: var(--golden); box-shadow: 0 0 0 3px rgba(13,90,191,0.12); }
+.light .form-label { color: #374151; }
+
+/* FAQ */
+.light .faq-item { background: #f7f8fa; border: 1px solid #e5e7eb; }
+.light .faq-item[open] { border-color: var(--golden); box-shadow: 0 12px 35px rgba(13,90,191,0.12); }
+.light .faq-item summary { color: #0a0a0a; }
+.light .faq-item p { color: #4b5563; }
+.light .faq-item summary::after { color: var(--golden); }
+
+/* Dish modal */
+.light .dish-modal-backdrop { background: rgba(15,23,42,0.6); }
+.light .dish-modal-card { background: #ffffff; border: 1px solid rgba(13,90,191,0.3); }
+.light .dish-modal-body { color: #374151; }
+.light .dish-modal-body h3 { color: #0a0a0a; }
+.light .dish-modal-price { color: var(--golden); }
+
+/* Loyalty */
+.light .loyalty-banner,
+.light .loyalty-inner { background: linear-gradient(135deg, var(--golden), var(--red)); }
+.light .loyalty-text h3,
+.light .loyalty-text p { color: #ffffff; }
+
+/* CTA */
+.light .cta-banner { background: linear-gradient(135deg, #0d5abf, #ea1a27); }
+.light .cta-title { color: #ffffff; }
+.light .cta-text { color: rgba(255,255,255,0.9); }
+.light .cta-bg { background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%); }
+
+/* Footer — dark slate for contrast */
+.light .footer { background: #0f172a; }
+.light .footer, .light .footer a, .light .footer p, .light .footer li { color: #cbd5e1; }
+.light .footer-title { color: #ffffff; }
+.light .footer-logo .logo-main { color: #ffffff; }
+.light .footer-logo .logo-sub { color: var(--golden-light); }
+.light .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); }
+
+/* Misc chrome */
+.light .scroll-progress { background: var(--golden); }
+.light .back-to-top { background: var(--golden); color: #fff; }
+.light .mobile-order-bar { background: var(--golden); border-top: 1px solid rgba(255,255,255,0.2); }
+.light .mobile-order-bar .mob-btn { color: #fff; }
+.light .preloader { background: #ffffff; }
+.light .loader-text .loader-letter { color: var(--golden); }
+
+/* ===== Products area kept as original dark/gold theme ===== */
+.light #deals,
+.light #menu {
+    --black: #0a0a0a;
+    --black-light: #141414;
+    --black-medium: #1a1a1a;
+    --black-dark: #050505;
+    --white: #ffffff;
+    --gray: #888888;
+    --gray-light: #cccccc;
+    --gray-dark: #555555;
+    --golden: #d4af37;
+    --golden-light: #f4d03f;
+    --golden-dark: #b8960c;
+    --golden-glow: rgba(212, 175, 55, 0.3);
+    --red: #c41e3a;
+    --red-light: #e74c3c;
+    --red-dark: #922b21;
+    --gold-gradient: linear-gradient(135deg, #f4d03f 0%, #d4af37 45%, #b8960c 100%);
+    --gold-gradient-soft: linear-gradient(135deg, rgba(244,208,63,0.15), rgba(212,175,55,0.05));
+    --shadow-golden: 0 10px 40px rgba(212, 175, 55, 0.25);
+    background: #0a0a0a !important;
+}
+.light #deals .section-title,
+.light #menu .section-title { color: var(--white); }
+.light #deals .section-subtitle,
+.light #menu .section-subtitle { color: var(--gray-light); }
+.light #deals p,
+.light #menu p { color: var(--gray-light); }
+
 
 
 
