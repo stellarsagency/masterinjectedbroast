@@ -1,4 +1,4 @@
-ï»¿/* ============================================
+/* ============================================
    MASTER INJECTED BROAST - Professional Website
    Premium Edition - Black, Golden, Red Theme
    ============================================ */
@@ -2087,7 +2087,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 
 /* ============================================================
-   LIGHT THEME (dumxbroast-style) â€” applied via <html class="light">
+   LIGHT THEME (dumxbroast-style) — applied via <html class="light">
    Everything flips to a light, blue/red/yellow fast-food look,
    EXCEPT the products area (#deals, #menu) which stays dark/gold.
    ============================================================ */
@@ -2213,7 +2213,7 @@ html.light { background: #f3f4f6; }
 .light .cta-text { color: rgba(255,255,255,0.9); }
 .light .cta-bg { background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%); }
 
-/* Footer â€” dark slate for contrast */
+/* Footer — dark slate for contrast */
 .light .footer { background: #0f172a; }
 .light .footer, .light .footer a, .light .footer p, .light .footer li { color: #cbd5e1; }
 .light .footer-title { color: #ffffff; }
@@ -2260,7 +2260,7 @@ html.light { background: #f3f4f6; }
 .light #menu p { color: var(--gray-light); }
 
 /* ============================================================
-   DUMX-STYLE FINAL THEME â€” full light fast-food redesign
+   DUMX-STYLE FINAL THEME — full light fast-food redesign
    Same look as dumxbroast.com: light gray bg, white rounded
    cards with soft shadows, blue/red/yellow accents.
    Hero = our own banner image (two-column layout).
@@ -2568,7 +2568,7 @@ html.light { background: #f3f4f6; }
 }
 
 /* ============================================================
-   GIANT BRAND-NAME WATERMARK â€” grey text drifting behind
+   GIANT BRAND-NAME WATERMARK — grey text drifting behind
    sections on the whole white background (scroll parallax)
    ============================================================ */
 html.light { background: #ffffff; }
@@ -2608,7 +2608,7 @@ html.light { background: #ffffff; }
     filter: grayscale(100%) contrast(1.05);
 }
 
-/* Clearer grey words â€” some rows upside down */
+/* Clearer grey words — some rows upside down */
 .bg-brand span { color: rgba(17, 24, 39, 0.08); }
 .bg-brand span:nth-child(3),
 .bg-brand span:nth-child(5),
@@ -2647,9 +2647,9 @@ html.light { background: #ffffff; }
 .light .experience-badge .badge-text { color: #ffffff !important; }
 
 /* ============================================================
-   SIGNATURE DEALS â€” premium card redesign
+   SIGNATURE DEALS — premium card redesign
    ============================================================ */
-.light .deals-grid { gap: 36px; }
+.light .deals-grid { gap: 24px; }
 
 .light .deal-card {
     background: #ffffff;
@@ -2671,16 +2671,16 @@ html.light { background: #ffffff; }
     box-shadow: 0 32px 64px rgba(234, 26, 39, 0.20);
 }
 .light .deal-card.featured {
-    transform: scale(1.035);
+    transform: scale(1.02);
     box-shadow: 0 0 0 3px #ffd400, 0 24px 55px rgba(234, 26, 39, 0.22);
 }
 .light .deal-card.featured:hover {
-    transform: scale(1.035) translateY(-14px);
+    transform: scale(1.02) translateY(-14px);
     box-shadow: 0 0 0 3px #ffd400, 0 36px 70px rgba(234, 26, 39, 0.28);
 }
 
 /* Image */
-.light .deal-header { height: 235px; }
+.light .deal-header { height: 185px; }
 .light .deal-header::after {
     content: '';
     position: absolute;
@@ -2715,14 +2715,14 @@ html.light { background: #ffffff; }
 }
 
 /* Body */
-.light .deal-body { padding: 30px 28px 32px; text-align: center; position: relative; z-index: 6; }
-.light .deal-name { font-size: 1.55rem; letter-spacing: 0.5px; color: #111827; }
+.light .deal-body { padding: 22px 20px 24px; text-align: center; position: relative; z-index: 6; }
+.light .deal-name { font-size: 1.2rem; letter-spacing: 0.5px; color: #111827; }
 .light .deal-tagline {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
+    font-size: 0.66rem;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
     color: #9aa1ab;
-    margin: 6px 0 18px;
+    margin: 4px 0 14px;
 }
 .light .deal-pieces {
     display: inline-flex;
@@ -2730,52 +2730,54 @@ html.light { background: #ffffff; }
     align-items: center;
     background: rgba(234, 26, 39, 0.06);
     border: 1px dashed rgba(234, 26, 39, 0.35);
-    padding: 12px 34px;
-    border-radius: 18px;
-    margin-bottom: 18px;
+    padding: 8px 26px;
+    border-radius: 14px;
+    margin-bottom: 14px;
 }
-.light .pieces-number { font-size: 2.8rem; line-height: 1; color: #ea1a27; }
-.light .pieces-text { font-size: 0.7rem; letter-spacing: 2.5px; text-transform: uppercase; color: #6b7280; margin-top: 4px; }
-.light .deal-features { display: flex; flex-direction: column; gap: 8px; margin: 0 0 20px; padding: 0; text-align: left; }
+.light .pieces-number { font-size: 2rem; line-height: 1; color: #ea1a27; }
+.light .pieces-text { font-size: 0.62rem; letter-spacing: 2px; text-transform: uppercase; color: #6b7280; margin-top: 3px; }
+.light .deal-features { display: flex; flex-direction: column; gap: 6px; margin: 0 0 15px; padding: 0; text-align: left; }
 .light .deal-features li {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background: #f8f9fb;
-    border-radius: 10px;
-    padding: 9px 14px;
-    font-size: 0.92rem;
+    border-radius: 9px;
+    padding: 6px 11px;
+    font-size: 0.82rem;
     color: #374151;
 }
-.light .deal-features li i { color: #ea1a27; }
+.light .deal-features li i { color: #ea1a27; font-size: 0.85em; }
 
 /* Pricing */
-.light .deal-pricing { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 22px; }
+.light .deal-pricing { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 16px; }
 .light .price-tag {
     display: inline-flex;
     align-items: baseline;
-    gap: 6px;
+    gap: 5px;
     background: linear-gradient(135deg, #ffd400, #ffb800) !important;
     border: 3px solid #ffffff;
     border-radius: 999px;
-    padding: 8px 24px;
-    box-shadow: 0 12px 26px rgba(255, 184, 0, 0.45);
+    padding: 5px 18px;
+    box-shadow: 0 10px 22px rgba(255, 184, 0, 0.45);
 }
-.light .price-tag .currency { font-size: 0.95rem; font-weight: 700; color: #111827; }
-.light .price-tag .amount { font-size: 2.3rem; font-weight: 800; color: #111827; line-height: 1; }
-.light .price-note { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #9aa1ab; }
+.light .price-tag .currency { font-size: 0.8rem; font-weight: 700; color: #111827; }
+.light .price-tag .amount { font-size: 1.65rem; font-weight: 800; color: #111827; line-height: 1; }
+.light .price-note { font-size: 0.64rem; letter-spacing: 1.8px; text-transform: uppercase; color: #9aa1ab; }
 
 /* Order button with shine sweep */
 .light .deal-btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.85rem;
     border-radius: 999px !important;
     background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
     color: #ffffff !important;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 14px 28px rgba(234, 26, 39, 0.35);
+    box-shadow: 0 12px 24px rgba(234, 26, 39, 0.35);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .light .deal-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 38px rgba(234, 26, 39, 0.45); }
@@ -2796,7 +2798,7 @@ html.light { background: #ffffff; }
 
 @media (max-width: 768px) {
     .light .deal-card.featured, .light .deal-card.featured:hover { transform: none; }
-    .light .deal-header { height: 210px; }
+    .light .deal-header { height: 165px; }
 }
 
 
