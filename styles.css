@@ -38,14 +38,45 @@
 
 /* ===== Reset ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; scroll-padding-top: 80px; background: var(--black); }
 body {
     font-family: var(--font-body);
-    background: var(--black);
+    background: transparent;
     color: var(--white);
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Cinematic Background ===== */
+.bg-cinematic {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image: url('https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    filter: blur(2px) saturate(1.15);
+    animation: cinematicDrift 32s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 50% 28%, rgba(12, 12, 12, 0.45), rgba(6, 6, 6, 0.9) 72%),
+        linear-gradient(180deg, rgba(6, 6, 6, 0.82), rgba(6, 6, 6, 0.9));
+    pointer-events: none;
+}
+@keyframes cinematicDrift {
+    0%   { transform: scale(1.05) translate(0, 0); }
+    100% { transform: scale(1.16) translate(-2%, -2.5%); }
+}
+/* Let the cinematic show through content sections */
+.about, .specialties, .deals, .menu, .gallery, .testimonials, .order, .features, .cta-banner {
+    background: rgba(12, 12, 12, 0.72) !important;
 }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
