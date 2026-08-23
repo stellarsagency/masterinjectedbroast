@@ -396,5 +396,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
-console.log('%c🍗 MASTER INJECTED BROAST', 'color: #d4af37; font-size: 24px; font-weight: bold; text-shadow: 2px 2px #c41e3a;');
+// ===== Brand Watermark Parallax =====
+const bgBrand = document.querySelector('.bg-brand');
+window.addEventListener('scroll', () => {
+    if (bgBrand) {
+        bgBrand.style.transform = `translateY(${-(window.scrollY * 0.08)}px)`;
+    }
+}, { passive: true });
+
+console.log('%c🍗 MASTER INJECTED BROAST', 'color: #ea1a27; font-size: 24px; font-weight: bold; text-shadow: 2px 2px #ffd400;');
 console.log('%cInjected with Flavor, Fried to Perfection!', 'color: #888; font-size: 12px;');

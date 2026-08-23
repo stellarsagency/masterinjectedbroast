@@ -2567,6 +2567,53 @@ html.light { background: #f3f4f6; }
     .light .hero-chip { font-size: 0.7rem; padding: 8px 12px; }
 }
 
+/* ============================================================
+   GIANT BRAND-NAME WATERMARK — grey text drifting behind
+   sections on the whole white background (scroll parallax)
+   ============================================================ */
+html.light { background: #ffffff; }
+
+.bg-brand {
+    position: fixed;
+    inset: -12% 0;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    pointer-events: none;
+    will-change: transform;
+}
+.bg-brand span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(3.4rem, 10.5vw, 10rem);
+    line-height: 1;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    color: rgba(17, 24, 39, 0.05);
+}
+.bg-brand span:nth-child(even) { margin-left: -14vw; }
+
+/* Sections go transparent so the watermark shows through */
+.light .about,
+.light .specialties,
+.light .testimonials,
+.light .order,
+.light .gallery,
+.light .faq,
+.light .loyalty,
+.light #deals,
+.light #menu,
+.light .hero {
+    background: transparent !important;
+}
+.light .features-strip { background: transparent !important; }
+@media (max-width: 768px) {
+    .bg-brand span { font-size: clamp(2.6rem, 13vw, 5rem); }
+}
+
 
 
 
