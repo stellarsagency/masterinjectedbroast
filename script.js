@@ -57,12 +57,17 @@ const navLinks = document.getElementById('navLinks');
 const allNavLinks = document.querySelectorAll('.nav-link');
 
 // Scroll effect
+const scrollProgress = document.getElementById('scrollProgress');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (scrollProgress) scrollProgress.style.width = progress + '%';
 });
 
 // Mobile menu

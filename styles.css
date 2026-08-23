@@ -57,6 +57,18 @@ input, textarea, select { font-family: inherit; outline: none; }
 
 ::selection { background: var(--golden); color: var(--black); }
 
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gold-gradient);
+    z-index: 10000;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    transition: width 0.1s linear;
+}
+
 /* Gold gradient text utility */
 .gold-text {
     background: var(--gold-gradient);
@@ -889,6 +901,11 @@ input, textarea, select { font-family: inherit; outline: none; }
 .deal-card.featured {
     border: 1px solid var(--golden);
     z-index: 2;
+    margin-top: -14px;
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.25), 0 18px 45px rgba(212, 175, 55, 0.12);
+}
+.deal-card.featured:hover {
+    box-shadow: 0 0 0 1px var(--golden), 0 28px 65px rgba(212, 175, 55, 0.28);
 }
 .deal-ribbon {
     position: absolute;
@@ -1081,34 +1098,27 @@ input, textarea, select { font-family: inherit; outline: none; }
 .menu-item:hover .menu-img {
     transform: scale(1.08);
 }
-
-/*
-/* Wing 3D */
-.wing-3d { position: relative; }
-.wing {
+.item-visual::after {
+    content: 'ORDER NOW';
     position: absolute;
-    width: 45px; height: 25px;
-    background: linear-gradient(145deg, #D2691E, #8B4513);
-    border-radius: 50% 50% 20% 50%;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(0deg, rgba(5, 5, 5, 0.92), transparent);
+    color: var(--golden);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: var(--transition);
+    z-index: 3;
 }
-.wing.w1 { top: 20px; left: 10px; transform: rotate(-20deg); }
-.wing.w2 { top: 30px; left: 35px; transform: rotate(15deg); }
-/* Sauce 3D */
-.sauce-3d { position: relative; }
-.sauce-cup {
-    position: absolute; bottom: 10px; left: 50%;
-    transform: translateX(-50%);
-    width: 40px; height: 30px;
-    background: linear-gradient(180deg, #ff6b35, #e74c3c);
-    border-radius: 5px 5px 15px 15px;
+.menu-item:hover .item-visual::after {
+    transform: translateY(0);
 }
-.sauce-drip {
-    position: absolute; top: 10px; left: 50%;
-    transform: translateX(-50%);
-    width: 30px; height: 8px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-}
+
 .item-content {
     padding: 20px;
 }
