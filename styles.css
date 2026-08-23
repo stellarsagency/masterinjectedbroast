@@ -1753,6 +1753,12 @@ input, textarea, select { font-family: inherit; outline: none; }
     .nav-right .order-btn { padding: 9px 16px; font-size: 0.72rem; letter-spacing: 1px; }
     .hero-subtitle { font-size: 1rem; }
     .cta-content { padding: 0 15px; }
+    .cta-banner { padding: 60px 0; }
+    .cta-bg { width: 500px; height: 500px; }
+    .cta-text { font-size: 1rem; margin-bottom: 28px; }
+    .cta-btn { display: block; width: 100%; max-width: 320px; margin: 0 auto; padding: 16px 30px; }
+    .section-header { margin-bottom: 40px; }
+    .about, .specialties, .deals, .menu, .gallery, .testimonials, .order { padding: 70px 0; }
     .review-card { padding: 28px 22px; }
     .hero { min-height: 100svh; }
     .hero-bg-image { background-attachment: scroll; }
@@ -1776,6 +1782,12 @@ input, textarea, select { font-family: inherit; outline: none; }
     .nav-right { gap: 10px; }
     .nav-right .order-btn { padding: 8px 13px; font-size: 0.65rem; }
     .cta-title { font-size: 1.9rem; }
+    .cta-banner { padding: 50px 0; }
+    .cta-bg { width: 360px; height: 360px; }
+    .cta-text { font-size: 0.95rem; }
+    .section-header { margin-bottom: 32px; }
+    .section-title { letter-spacing: 1px; }
+    .about, .specialties, .deals, .menu, .gallery, .testimonials, .order { padding: 55px 0; }
 }
 
 
