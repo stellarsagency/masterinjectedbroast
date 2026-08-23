@@ -38,7 +38,7 @@
 
 /* ===== Reset ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
+html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; scroll-padding-top: 80px; }
 body {
     font-family: var(--font-body);
     background: var(--black);
@@ -1725,30 +1725,49 @@ input, textarea, select { font-family: inherit; outline: none; }
     .section-title { font-size: 2.2rem; }
     .features-strip { padding: 15px 0; }
     .strip-item span { font-size: 0.7rem; }
+    .strip-divider { display: none; }
     .features-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
     .menu-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
     .gallery-item.gi-1, .gallery-item.gi-5 { grid-row: span 1; }
     .contact-cards { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-links, .footer-contact, .footer-hours { display: inline-block; text-align: center; }
     .footer-bottom-content { flex-direction: column; gap: 10px; text-align: center; }
     .hero-cta { flex-direction: column; align-items: center; }
-    .broast-showcase { width: 280px; height: 280px; }
-    .experience-badge { padding: 15px 20px; }
-    .badge-years { font-size: 2rem; }
+    .hero-content { padding: 0 20px; }
+    .about-content { padding-left: 0; }
+    .about-image-3d::before, .about-image-3d::after { display: none; }
+    .experience-badge { padding: 13px 18px; }
+    .badge-years { font-size: 1.8rem; }
+    .nav-right .order-btn { padding: 9px 16px; font-size: 0.72rem; letter-spacing: 1px; }
+    .hero-subtitle { font-size: 1rem; }
+    .cta-content { padding: 0 15px; }
+    .review-card { padding: 28px 22px; }
+    .hero { min-height: 100svh; }
+    .hero-bg-image { background-attachment: scroll; }
 }
 @media (max-width: 480px) {
     .word { font-size: 2rem; }
     .line-2 .word { font-size: 2.5rem; }
     .section-title { font-size: 1.8rem; }
-    .hero-badge { padding: 8px 20px; }
-    .badge-line-1 { font-size: 0.65rem; }
+    .hero-badge { padding: 8px 18px; }
+    .badge-line-1 { font-size: 0.6rem; letter-spacing: 2px; }
     .stat-number { font-size: 1.5rem; }
-    .deal-body { padding: 20px; }
+    .deal-body { padding: 22px 18px; }
     .pieces-number { font-size: 2.5rem; }
     .price-tag .amount { font-size: 2.5rem; }
-    .testimonial-text { font-size: 1rem; }
+    .review-text { font-size: 0.95rem; }
+    .hero-stats { gap: 16px; }
+    .stat-item { padding-top: 14px; }
+    .hero::after { width: 360px; height: 360px; left: 50%; top: 38%; }
+    .logo-main { font-size: 0.82rem; }
+    .logo-sub { font-size: 0.55rem; letter-spacing: 3px; }
+    .nav-right { gap: 10px; }
+    .nav-right .order-btn { padding: 8px 13px; font-size: 0.65rem; }
+    .cta-title { font-size: 1.9rem; }
 }
 
 
