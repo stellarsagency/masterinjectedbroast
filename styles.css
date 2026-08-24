@@ -2283,8 +2283,16 @@ input, textarea, select { font-family: inherit; outline: none; }
     --shadow-golden: 0 10px 40px rgba(234, 26, 39, 0.18);
 }
 html.light { background: #f3f4f6; }
-.light .bg-cinematic,
-.light .bg-overlay { display: none; }
+.light .bg-cinematic {
+    display: block;
+    opacity: 0.12;
+}
+.light .bg-overlay {
+    display: block;
+    background:
+        radial-gradient(circle at 50% 28%, rgba(243, 244, 246, 0.3), rgba(243, 244, 246, 0.75) 72%),
+        linear-gradient(180deg, rgba(243, 244, 246, 0.7), rgba(243, 244, 246, 0.85));
+}
 
 /* Navbar */
 .light .navbar { background: rgba(255,255,255,0.92); backdrop-filter: blur(14px); box-shadow: 0 2px 14px rgba(0,0,0,0.08); }
@@ -2303,7 +2311,7 @@ html.light { background: #f3f4f6; }
 .light .btn-secondary:hover { background: var(--golden); color: #fff; }
 
 /* Hero */
-.light .hero { background: #ffffff; }
+.light .hero { background: transparent; }
 .light .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.35) 100%); }
 .light .hero-title { text-shadow: none; }
 .light .hero-subtitle { color: #4b5563; }
@@ -2320,7 +2328,7 @@ html.light { background: #f3f4f6; }
 .light .gallery,
 .light .faq,
 .light .loyalty,
-.light .features-strip { background: #ffffff !important; }
+.light .features-strip { background: rgba(255,255,255,0.4) !important; }
 .light .section-subtitle { color: #6a7282; }
 .light .section-title { color: #0a0a0a; }
 .light p { color: #374151; }
@@ -2572,9 +2580,9 @@ html.light { background: #f3f4f6; }
 .light .specialties,
 .light .testimonials,
 .light .order,
-.light .gallery { background: #ffffff !important; }
-.light .faq { background: #f8fafc !important; }
-.light .loyalty { background: #ffffff !important; }
+.light .gallery { background: rgba(255,255,255,0.5) !important; }
+.light .faq { background: rgba(255,255,255,0.5) !important; }
+.light .loyalty { background: transparent !important; }
 .light .features-strip { background: #ffffff !important; border-bottom: 1px solid #eef0f3; }
 .light .section-title { color: #111827; }
 .light .section-subtitle { color: #6b7280; }
@@ -2729,7 +2737,7 @@ html.light { background: #f3f4f6; }
     --shadow-golden: 0 10px 40px rgba(234, 26, 39, 0.18);
     background: #ffffff !important;
 }
-.light #deals { background: #f8fafc !important; }
+.light #deals { background: rgba(255,255,255,0.4) !important; }
 .light #deals .section-title,
 .light #menu .section-title { color: #111827; }
 .light #deals .section-subtitle,
