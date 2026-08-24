@@ -3286,12 +3286,12 @@ html.light { background: #ffffff; }
    DARK MODE TOGGLE BUTTON
    ============================================================ */
 .theme-toggle {
-    width: 38px; height: 38px;
+    width: 40px; height: 40px;
     border-radius: 50%;
-    border: 2px solid rgba(234, 26, 39, 0.4);
-    background: rgba(234, 26, 39, 0.1);
+    border: 2px solid #ea1a27;
+    background: rgba(234, 26, 39, 0.15);
     color: #ffd400;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -3299,6 +3299,8 @@ html.light { background: #ffffff; }
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1001;
+    flex-shrink: 0;
 }
 .theme-toggle:hover {
     background: rgba(234, 26, 39, 0.25);
