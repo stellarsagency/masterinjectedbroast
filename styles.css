@@ -3282,5 +3282,217 @@ html.light { background: #ffffff; }
     .light .hero-media::after { display: none; }
 }
 
+/* ============================================================
+   DARK MODE TOGGLE BUTTON
+   ============================================================ */
+.theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 2px solid rgba(234, 26, 39, 0.4);
+    background: rgba(234, 26, 39, 0.1);
+    color: #ffd400;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.theme-toggle:hover {
+    background: rgba(234, 26, 39, 0.25);
+    border-color: #ea1a27;
+    transform: rotate(20deg) scale(1.1);
+    box-shadow: 0 0 16px rgba(234, 26, 39, 0.4);
+}
+.theme-toggle .fa-moon,
+.theme-toggle .fa-sun {
+    position: absolute;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.light .theme-toggle .fa-moon { opacity: 1; transform: rotate(0deg) scale(1); }
+.light .theme-toggle .fa-sun { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+html:not(.light) .theme-toggle .fa-moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
+html:not(.light) .theme-toggle .fa-sun { opacity: 1; transform: rotate(0deg) scale(1); }
 
+/* ============================================================
+   DARK MODE THEME (default = dark, .light = light)
+   ============================================================ */
 
+/* -- Base -- */
+html:not(.light) { color-scheme: dark; }
+html:not(.light) body {
+    background: #0a0a0a;
+    color: #e5e7eb;
+}
+
+/* -- Navbar -- */
+html:not(.light) .navbar {
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+}
+html:not(.light) .navbar::after {
+    background: linear-gradient(90deg, #ea1a27, #ffd400);
+}
+html:not(.light) .logo-main,
+html:not(.light) .logo-sub { color: #ffffff; }
+
+/* -- Sections -- */
+html:not(.light) .about,
+html:not(.light) .specialties,
+html:not(.light) .deals,
+html:not(.light) .menu,
+html:not(.light) .gallery,
+html:not(.light) .testimonials,
+html:not(.light) .order,
+html:not(.light) .contact,
+html:not(.light) .fries,
+html:not(.light) .drinks {
+    background: transparent;
+}
+
+/* -- Section Headers -- */
+html:not(.light) .section-title { color: #ffffff; }
+html:not(.light) .section-desc { color: #9ca3af; }
+html:not(.light) .section-tag {
+    color: #ffd400;
+    border-color: rgba(255, 212, 0, 0.3);
+    background: rgba(255, 212, 0, 0.06);
+}
+html:not(.light) .section-header::after {
+    background: linear-gradient(90deg, #ea1a27, #ffd400);
+}
+
+/* -- Specialty Cards -- */
+html:not(.light) .specialty-card {
+    background: rgba(17, 24, 39, 0.8);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .specialty-card h3 { color: #ffffff; }
+html:not(.light) .specialty-card p { color: #9ca3af; }
+html:not(.light) .icon-main { color: #ea1a27; }
+
+/* -- Deal Cards -- */
+html:not(.light) .deal-card {
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .deal-name { color: #ffffff; }
+html:not(.light) .deal-tagline { color: #9ca3af; }
+html:not(.light) .deal-features li { color: #d1d5db; }
+html:not(.light) .deal-features li i { color: #22c55e; }
+html:not(.light) .price-tag .amount { color: #ffd400; }
+html:not(.light) .price-tag .currency { color: #ffd400; }
+html:not(.light) .deal-header { background: #1a1a1a; }
+html:not(.light) .deal-image-3d { background: #1a1a1a; }
+
+/* -- Menu Items -- */
+html:not(.light) .menu-item {
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .menu-img-3d { background: #1a1a1a; }
+html:not(.light) .item-content h4 { color: #ffffff; }
+html:not(.light) .item-content p { color: #9ca3af; }
+html:not(.light) .item-price { color: #ffd400; }
+
+/* -- Gallery -- */
+html:not(.light) .gallery-item { border-color: rgba(255, 255, 255, 0.06); }
+html:not(.light) .gallery-img { background: #1a1a1a; }
+html:not(.light) .gallery-overlay span { color: #ffffff; }
+
+/* -- Testimonials -- */
+html:not(.light) .review-card {
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .review-text { color: #d1d5db; }
+html:not(.light) .review-author { color: #ffffff; }
+html:not(.light) .review-role { color: #9ca3af; }
+html:not(.light) .review-stars i { color: #ffd400; }
+
+/* -- Contact -- */
+html:not(.light) .contact-card {
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .contact-card h4 { color: #ffffff; }
+html:not(.light) .contact-card p { color: #9ca3af; }
+html:not(.light) .form-input,
+html:not(.light) .form-textarea {
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e5e7eb;
+}
+html:not(.light) .form-label { color: #d1d5db; }
+
+/* -- FAQ -- */
+html:not(.light) .faq-item {
+    background: #111111;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+html:not(.light) .faq-question { color: #ffffff; }
+html:not(.light) .faq-answer { color: #9ca3af; }
+html:not(.light) .faq-toggle { color: #ea1a27; }
+
+/* -- CTA & Loyalty -- */
+html:not(.light) .cta-title { color: #ffffff; }
+html:not(.light) .cta-text { color: rgba(255, 255, 255, 0.75); }
+html:not(.light) .loyalty-text h3 { color: #ffd400; }
+html:not(.light) .loyalty-text p { color: rgba(255, 255, 255, 0.75); }
+
+/* -- Footer -- */
+html:not(.light) .footer { background: #050505; }
+html:not(.light) .footer-logo .logo-main { color: #ffffff; }
+html:not(.light) .footer-desc { color: #9ca3af; }
+html:not(.light) .footer-links li a { color: #9ca3af; }
+html:not(.light) .footer-links li a:hover { color: #ffd400; }
+html:not(.light) .footer-contact li { color: #9ca3af; }
+html:not(.light) .footer-contact li i { color: #ea1a27; }
+html:not(.light) .footer-hours li { color: #9ca3af; }
+html:not(.light) .footer-bottom { border-color: rgba(255, 255, 255, 0.06); }
+html:not(.light) .footer-bottom p { color: #6b7280; }
+
+/* -- Modal -- */
+html:not(.light) .dish-modal-card { background: #111111; }
+html:not(.light) .dish-modal-body h3 { color: #ffffff; }
+html:not(.light) .dish-modal-body p { color: #9ca3af; }
+
+/* -- Features Strip -- */
+html:not(.light) .features-strip { background: rgba(17, 24, 39, 0.6); }
+html:not(.light) .strip-item span { color: #d1d5db; }
+
+/* -- Hero -- */
+html:not(.light) .hero-title .word { color: #ffffff; }
+html:not(.light) .hero-subtitle { color: #d1d5db; }
+html:not(.light) .hero-badge { background: rgba(234, 26, 39, 0.15); border-color: rgba(234, 26, 39, 0.3); }
+html:not(.light) .badge-line-1 { color: #ea1a27; }
+html:not(.light) .stat-item span { color: #ffffff; }
+html:not(.light) .stat-label { color: #9ca3af; }
+
+/* -- Watermark -- */
+html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.03); }
+
+/* -- Preloader -- */
+html:not(.light) .preloader { background: #0a0a0a; }
+html:not(.light) .loader-word { color: #ffffff; }
+
+/* -- Mobile Order Bar -- */
+html:not(.light) .mobile-order-bar { background: rgba(10, 10, 10, 0.95); }
+
+/* -- Back to top -- */
+html:not(.light) .back-to-top { background: #ea1a27; color: #ffffff; }
+
+/* -- Scrollbar -- */
+html:not(.light) ::-webkit-scrollbar { width: 8px; }
+html:not(.light) ::-webkit-scrollbar-track { background: #0a0a0a; }
+html:not(.light) ::-webkit-scrollbar-thumb { background: #ea1a27; border-radius: 4px; }
+
+/* ============================================================
+   RESPONSIVE DARK MODE
+   ============================================================ */
+@media (max-width: 768px) {
+    html:not(.light) .theme-toggle { width: 34px; height: 34px; font-size: 0.8rem; }
+    html:not(.light) .deal-card.featured:hover { transform: translateY(-10px); }
+}

@@ -84,6 +84,10 @@
                 <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
             </div>
             <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
                 <a href="https://wa.me/923001234567?text=Hello%20Master%20Injected%20Broast!%20I%20want%20to%20place%20an%20order." class="order-btn">
                     <span class="btn-text">Order Now</span>
                     <span class="btn-icon"><i class="fab fa-whatsapp"></i></span>
@@ -1058,5 +1062,19 @@
     }
     </script>
     <script src="script.js?v=3"></script>
+    <script>
+    (function() {
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark') html.classList.remove('light');
+        else html.classList.add('light');
+
+        toggle.addEventListener('click', function() {
+            html.classList.toggle('light');
+            localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+        });
+    })();
+    </script>
 </body>
 </html>
