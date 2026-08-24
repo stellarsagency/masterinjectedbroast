@@ -1403,20 +1403,51 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* ===== CTA Banner ===== */
 .cta-banner {
     position: relative;
-    padding: 90px 0;
-    background: var(--black-light);
-    border-top: 1px solid rgba(234, 26, 39, 0.12);
-    border-bottom: 1px solid rgba(234, 26, 39, 0.12);
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+    background-size: 400% 400%;
+    animation: ctaGradient 8s ease infinite;
     overflow: hidden;
     text-align: center;
+}
+@keyframes ctaGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 .cta-bg {
     position: absolute;
     top: 50%; left: 50%;
-    width: 800px; height: 800px;
+    width: 700px; height: 700px;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(234, 26, 39, 0.12), transparent 65%);
+    background: radial-gradient(circle, rgba(234, 26, 39, 0.2), transparent 65%);
     pointer-events: none;
+    animation: ctaPulse 4s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+.cta-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.cta-particles span {
+    position: absolute;
+    width: 6px; height: 6px;
+    background: rgba(255, 212, 0, 0.5);
+    border-radius: 50%;
+    animation: ctaFloat 6s ease-in-out infinite;
+}
+.cta-particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; animation-duration: 7s; }
+.cta-particles span:nth-child(2) { left: 25%; top: 70%; animation-delay: 1s; animation-duration: 5s; width: 4px; height: 4px; }
+.cta-particles span:nth-child(3) { left: 55%; top: 15%; animation-delay: 2s; animation-duration: 8s; width: 8px; height: 8px; background: rgba(234, 26, 39, 0.4); }
+.cta-particles span:nth-child(4) { left: 75%; top: 65%; animation-delay: 0.5s; animation-duration: 6s; }
+.cta-particles span:nth-child(5) { left: 90%; top: 35%; animation-delay: 3s; animation-duration: 9s; width: 5px; height: 5px; }
+@keyframes ctaFloat {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+    50% { transform: translateY(-30px) scale(1.3); opacity: 1; }
 }
 .cta-content {
     position: relative;
@@ -1430,36 +1461,123 @@ input, textarea, select { font-family: inherit; outline: none; }
     gap: 8px;
     font-family: var(--font-display);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--golden);
-    padding: 7px 18px;
-    border: 1px solid rgba(234, 26, 39, 0.3);
+    color: #ffd400;
+    padding: 8px 22px;
+    border: 1px solid rgba(255, 212, 0, 0.35);
     border-radius: 50px;
     margin-bottom: 25px;
+    background: rgba(255, 212, 0, 0.08);
+    animation: tagGlow 3s ease-in-out infinite;
+}
+@keyframes tagGlow {
+    0%, 100% { box-shadow: 0 0 12px rgba(255, 212, 0, 0.15); }
+    50% { box-shadow: 0 0 24px rgba(255, 212, 0, 0.35); }
 }
 .cta-title {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: #ffffff;
 }
 .cta-text {
-    color: var(--gray-light);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 }
 .cta-btn {
-    padding: 18px 45px;
+    padding: 18px 50px;
     font-size: 1rem;
+    background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
+    border-radius: 999px !important;
+    box-shadow: 0 16px 40px rgba(234, 26, 39, 0.45);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-@media (max-width: 768px) {
-    .cta-title { font-size: 2.2rem; }
+.cta-btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 24px 55px rgba(234, 26, 39, 0.55);
+}
+
+/* ===== Loyalty Banner ===== */
+.loyalty-banner { padding: 30px 0; }
+.loyalty-inner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b);
+    background-size: 300% 300%;
+    animation: loyaltyGradient 6s ease infinite;
+    border: 1px solid rgba(255, 212, 0, 0.25);
+    border-radius: 20px;
+    padding: 32px 38px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.loyalty-inner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 212, 0, 0.12), transparent);
+    transform: skewX(-20deg);
+    animation: loyaltyShine 4s ease-in-out infinite;
+}
+@keyframes loyaltyGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+@keyframes loyaltyShine {
+    0% { left: -75%; }
+    100% { left: 130%; }
+}
+.loyalty-icon {
+    width: 68px; height: 68px; flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd400, #ffb800);
+    display: flex; align-items: center; justify-content: center;
+    color: #1e1b4b; font-size: 1.7rem;
+    box-shadow: 0 0 30px rgba(255, 212, 0, 0.4);
+    position: relative;
+    z-index: 2;
+    animation: iconPulse 2.5s ease-in-out infinite;
+}
+@keyframes iconPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 212, 0, 0.3); transform: scale(1); }
+    50% { box-shadow: 0 0 40px rgba(255, 212, 0, 0.6); transform: scale(1.08); }
+}
+.loyalty-text { flex: 1; min-width: 200px; position: relative; z-index: 2; }
+.loyalty-text h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: #ffd400;
+}
+.loyalty-text p { color: rgba(255, 255, 255, 0.8); }
+.loyalty-btn {
+    white-space: nowrap;
+    background: linear-gradient(135deg, #ffd400, #ffb800) !important;
+    color: #1e1b4b !important;
+    font-weight: 700;
+    border-radius: 999px !important;
+    padding: 14px 32px;
+    box-shadow: 0 10px 28px rgba(255, 212, 0, 0.35);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.loyalty-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(255, 212, 0, 0.5);
 }
 
 /* ===== Order Section ===== */
@@ -1870,8 +1988,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     .nav-right .order-btn { padding: 9px 16px; font-size: 0.72rem; letter-spacing: 1px; }
     .hero-subtitle { font-size: 1rem; }
     .cta-content { padding: 0 15px; }
-    .cta-banner { padding: 60px 0; }
+    .cta-banner { padding: 70px 0; }
     .cta-bg { width: 500px; height: 500px; }
+    .cta-title { font-size: 2.2rem; }
     .cta-text { font-size: 1rem; margin-bottom: 28px; }
     .cta-btn { display: block; width: 100%; max-width: 320px; margin: 0 auto; padding: 16px 30px; }
     .section-header { margin-bottom: 40px; }
@@ -1901,8 +2020,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     .nav-right { gap: 10px; }
     .nav-right .order-btn { padding: 8px 13px; font-size: 0.65rem; }
     .cta-title { font-size: 1.9rem; }
-    .cta-banner { padding: 50px 0; }
+    .cta-banner { padding: 55px 0; }
     .cta-bg { width: 360px; height: 360px; }
+    .cta-title { font-size: 1.8rem; }
     .cta-text { font-size: 0.95rem; }
     .section-header { margin-bottom: 32px; }
     .section-title { letter-spacing: 1px; }
@@ -2058,7 +2178,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     .cta-title { font-size: 2rem; }
     .mobile-order-bar { display: flex; }
     .footer { padding-bottom: 90px; }
-    .loyalty-inner { flex-direction: column; text-align: center; padding: 26px 22px; gap: 18px; }
+    .loyalty-inner { flex-direction: column; text-align: center; padding: 28px 22px; gap: 18px; }
     .faq { padding: 70px 0; }
     .faq-item { padding: 0 18px; }
     .faq-item summary { font-size: 1rem; }
@@ -2087,7 +2207,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 
 /* ============================================================
-   LIGHT THEME (dumxbroast-style) — applied via <html class="light">
+   LIGHT THEME (dumxbroast-style) ï¿½ applied via <html class="light">
    Everything flips to a light, blue/red/yellow fast-food look,
    EXCEPT the products area (#deals, #menu) which stays dark/gold.
    ============================================================ */
@@ -2202,18 +2322,27 @@ html.light { background: #f3f4f6; }
 .light .dish-modal-price { color: var(--golden); }
 
 /* Loyalty */
-.light .loyalty-banner,
-.light .loyalty-inner { background: linear-gradient(135deg, var(--golden), var(--red)); }
-.light .loyalty-text h3,
-.light .loyalty-text p { color: #ffffff; }
+.light .loyalty-banner { background: transparent; }
+.light .loyalty-inner {
+    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b);
+    background-size: 300% 300%;
+    border-color: rgba(255, 212, 0, 0.3);
+}
+.light .loyalty-text h3 { color: #ffd400; }
+.light .loyalty-text p { color: rgba(255, 255, 255, 0.85); }
 
 /* CTA */
-.light .cta-banner { background: linear-gradient(135deg, #ea1a27, #ea1a27); }
+.light .cta-banner {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+    background-size: 400% 400%;
+    animation: ctaGradient 8s ease infinite;
+}
 .light .cta-title { color: #ffffff; }
-.light .cta-text { color: rgba(255,255,255,0.9); }
-.light .cta-bg { background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%); }
+.light .cta-text { color: rgba(255, 255, 255, 0.8); }
+.light .cta-bg { background: radial-gradient(circle, rgba(234, 26, 39, 0.2), transparent 70%); }
+.light .cta-tag { color: #ffd400; border-color: rgba(255, 212, 0, 0.35); background: rgba(255, 212, 0, 0.08); }
 
-/* Footer — dark slate for contrast */
+/* Footer ï¿½ dark slate for contrast */
 .light .footer { background: #0f172a; }
 .light .footer, .light .footer a, .light .footer p, .light .footer li { color: #cbd5e1; }
 .light .footer-title { color: #ffffff; }
@@ -2260,7 +2389,7 @@ html.light { background: #f3f4f6; }
 .light #menu p { color: var(--gray-light); }
 
 /* ============================================================
-   DUMX-STYLE FINAL THEME — full light fast-food redesign
+   DUMX-STYLE FINAL THEME ï¿½ full light fast-food redesign
    Same look as dumxbroast.com: light gray bg, white rounded
    cards with soft shadows, blue/red/yellow accents.
    Hero = our own banner image (two-column layout).
@@ -2468,26 +2597,32 @@ html.light { background: #f3f4f6; }
 .light .form-textarea:focus { border-color: #ea1a27; box-shadow: 0 0 0 3px rgba(13,90,191,0.12); }
 .light .form-label { color: #374151; }
 
-/* Loyalty banner -> yellow */
-.light .loyalty-banner,
+/* Loyalty banner -> dark indigo */
+.light .loyalty-banner { background: transparent; }
 .light .loyalty-inner {
-    background: linear-gradient(135deg, #ffd400, #ffb800) !important;
-    border-radius: 22px;
-    box-shadow: 0 18px 45px rgba(255,184,0,0.35);
+    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b) !important;
+    background-size: 300% 300% !important;
+    animation: loyaltyGradient 6s ease infinite;
+    border-color: rgba(255, 212, 0, 0.3) !important;
 }
-.light .loyalty-text h3 { color: #111827; }
-.light .loyalty-text p { color: #4b3a00; }
-.light .loyalty-btn { background: #111827 !important; color: #ffd400 !important; border-radius: 999px; }
+.light .loyalty-text h3 { color: #ffd400; }
+.light .loyalty-text p { color: rgba(255, 255, 255, 0.85); }
+.light .loyalty-btn { background: linear-gradient(135deg, #ffd400, #ffb800) !important; color: #1e1b4b !important; border-radius: 999px; font-weight: 700; }
 
-/* CTA banner -> blue */
-.light .cta-banner { background: linear-gradient(135deg, #ea1a27, #b3121d) !important; }
+/* CTA banner -> dark animated gradient */
+.light .cta-banner {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a) !important;
+    background-size: 400% 400% !important;
+    animation: ctaGradient 8s ease infinite;
+}
 .light .cta-title { color: #ffffff; }
-.light .cta-text { color: rgba(255,255,255,0.92); }
+.light .cta-text { color: rgba(255, 255, 255, 0.8); }
+.light .cta-tag { color: #ffd400; border-color: rgba(255, 212, 0, 0.35); background: rgba(255, 212, 0, 0.08); }
 .light .cta-btn {
-    background: #ffd400 !important;
-    color: #111827 !important;
+    background: linear-gradient(135deg, #ea1a27, #b3121d) !important;
+    color: #ffffff !important;
     border-radius: 999px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 16px 40px rgba(234, 26, 39, 0.45);
 }
 
 /* Dish modal */
@@ -2568,7 +2703,7 @@ html.light { background: #f3f4f6; }
 }
 
 /* ============================================================
-   GIANT BRAND-NAME WATERMARK — grey text drifting behind
+   GIANT BRAND-NAME WATERMARK ï¿½ grey text drifting behind
    sections on the whole white background (scroll parallax)
    ============================================================ */
 html.light { background: #ffffff; }
@@ -2608,7 +2743,7 @@ html.light { background: #ffffff; }
     filter: grayscale(100%) contrast(1.05);
 }
 
-/* Clearer grey words — some rows upside down */
+/* Clearer grey words ï¿½ some rows upside down */
 .bg-brand span { color: rgba(17, 24, 39, 0.08); }
 .bg-brand span:nth-child(3),
 .bg-brand span:nth-child(5),
@@ -2647,7 +2782,7 @@ html.light { background: #ffffff; }
 .light .experience-badge .badge-text { color: #ffffff !important; }
 
 /* ============================================================
-   SIGNATURE DEALS — premium card redesign
+   SIGNATURE DEALS ï¿½ premium card redesign
    ============================================================ */
 .light .deals-grid { gap: 24px; }
 
