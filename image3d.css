@@ -184,8 +184,7 @@
 .about-main-img {
     width: 100%;
     max-width: 500px;
-    height: 450px;
-    object-fit: contain;
+    display: block;
     border-radius: 20px;
     background: #ffffff;
     border: 2px solid rgba(234, 26, 39, 0.25);

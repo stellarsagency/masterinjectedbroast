@@ -1020,15 +1020,13 @@ input, textarea, select { font-family: inherit; outline: none; }
 .deal-ribbon.featured-ribbon { background: var(--red); color: var(--white); }
 .deal-ribbon.premium-ribbon { background: var(--black); color: var(--golden); border: 1px solid var(--golden); }
 .deal-header {
-    height: 240px;
-    background: var(--black);
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
 .deal-image-3d {
     position: relative;
-    width: 100%; height: 100%;
-    overflow: hidden;
+    width: 100%;
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -1036,10 +1034,8 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .deal-img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: block;
     transition: transform 0.6s ease;
-    padding: 8px;
 }
 .deal-card:hover .deal-img {
     transform: scale(1.05);
@@ -1189,7 +1185,6 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .menu-img-3d {
     width: 100%;
-    height: 200px;
     overflow: hidden;
     background: #ffffff;
     display: flex;
@@ -1197,10 +1192,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     justify-content: center;
 }
 .menu-img {
-    width: 100%; height: 100%;
-    object-fit: contain;
+    width: 100%;
+    display: block;
     transition: transform 0.5s ease;
-    padding: 8px;
 }
 .menu-item:hover .menu-img {
     transform: scale(1.08);
@@ -2250,7 +2244,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     .section-title { font-size: 1.7rem; }
     .cta-title { font-size: 1.7rem; }
     .hero-subtitle { font-size: 0.95rem; }
-    .deal-header { height: 200px; }
+    .deal-header { }
     .loyalty-text h3 { font-size: 1.2rem; }
     .loyalty-inner { padding: 22px 16px; }
     .dish-modal-img { height: 190px; }
@@ -2880,7 +2874,7 @@ html.light { background: #ffffff; }
 }
 
 /* Image */
-.light .deal-header { height: 185px; }
+.light .deal-header { }
 .light .deal-header::after {
     content: '';
     position: absolute;
@@ -2998,7 +2992,7 @@ html.light { background: #ffffff; }
 
 @media (max-width: 768px) {
     .light .deal-card.featured, .light .deal-card.featured:hover { transform: none; }
-    .light .deal-header { height: 165px; }
+    .light .deal-header { }
 }
 
 /* ============================================================
