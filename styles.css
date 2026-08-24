@@ -2936,9 +2936,292 @@ html.light { background: #ffffff; }
     .light .deal-header { height: 165px; }
 }
 
+/* ============================================================
+   3D EFFECTS + BRANDING ENHANCEMENTS
+   ============================================================ */
 
+/* --- Deal Cards 3D Tilt --- */
+.light .deal-card {
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.22, 1.2, 0.36, 1), box-shadow 0.5s ease;
+}
+.light .deal-card:hover {
+    transform: translateY(-12px) rotateX(3deg) rotateY(-2deg);
+    box-shadow: 0 30px 60px rgba(234, 26, 39, 0.2), 0 0 0 1px rgba(234, 26, 39, 0.1);
+}
+.light .deal-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 26px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(234,26,39,0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.light .deal-card:hover::after { opacity: 1; }
 
+/* --- Menu Items 3D Hover --- */
+.light .menu-item {
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+.light .menu-item .menu-img-3d {
+    transition: transform 0.5s cubic-bezier(0.22, 1.2, 0.36, 1);
+}
+.light .menu-item:hover .menu-img-3d {
+    transform: translateZ(20px) scale(1.03);
+}
+.light .menu-item .item-content {
+    transition: transform 0.4s ease;
+}
+.light .menu-item:hover .item-content {
+    transform: translateZ(10px);
+}
 
+/* --- Gallery 3D Depth --- */
+.light .gallery-item {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.light .gallery-item .gallery-img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+}
+.light .gallery-item:hover .gallery-img {
+    transform: scale(1.08) translateZ(30px);
+    filter: brightness(1.1);
+}
+.light .gallery-item .gallery-overlay {
+    transition: transform 0.5s ease, opacity 0.4s ease;
+}
+.light .gallery-item:hover .gallery-overlay {
+    transform: translateZ(15px);
+}
+
+/* --- Section Decorative Dividers --- */
+.light .section-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ea1a27, #ffd400);
+    margin: 18px auto 0;
+    border-radius: 2px;
+    animation: dividerGlow 3s ease-in-out infinite;
+}
+@keyframes dividerGlow {
+    0%, 100% { box-shadow: 0 0 8px rgba(234, 26, 39, 0.3); width: 60px; }
+    50% { box-shadow: 0 0 18px rgba(234, 26, 39, 0.6); width: 80px; }
+}
+
+/* --- Hero Floating Elements --- */
+.light .hero-media {
+    position: relative;
+}
+.light .hero-media::before {
+    content: '';
+    position: absolute;
+    top: -15px; left: -15px;
+    width: 100%; height: 100%;
+    border: 2px solid rgba(234, 26, 39, 0.2);
+    border-radius: 24px;
+    z-index: -1;
+    animation: heroBorderFloat 5s ease-in-out infinite;
+}
+.light .hero-media::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; right: -10px;
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #ffd400, #ffb800);
+    border-radius: 50%;
+    z-index: -1;
+    animation: heroDotFloat 4s ease-in-out infinite;
+    filter: blur(1px);
+}
+@keyframes heroBorderFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(5px, -5px); }
+}
+@keyframes heroDotFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(-8px, 8px) scale(1.15); opacity: 1; }
+}
+
+/* --- Brand Watermark Enhanced --- */
+.light .bg-brand span {
+    font-weight: 700;
+    text-shadow: 0 2px 20px rgba(234, 26, 39, 0.04);
+}
+
+/* --- About Section 3D Card --- */
+.light .about-content {
+    position: relative;
+}
+.light .about-content::before {
+    content: '';
+    position: absolute;
+    top: -8px; left: -8px;
+    right: 8px; bottom: 8px;
+    border: 2px solid rgba(234, 26, 39, 0.15);
+    border-radius: 20px;
+    z-index: -1;
+    transition: transform 0.4s ease;
+}
+.light .about-content:hover::before {
+    transform: translate(4px, 4px);
+}
+
+/* --- Experience Badge Enhanced --- */
+.light .experience-badge {
+    animation: badgeFloat 3.5s ease-in-out infinite;
+}
+@keyframes badgeFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+/* --- CTA Button 3D Press --- */
+.light .btn-primary {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.light .btn-primary:active {
+    transform: translateY(2px) scale(0.98);
+}
+
+/* --- Specialty Cards Glow --- */
+.light .specialty-card {
+    position: relative;
+    overflow: hidden;
+}
+.light .specialty-card::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(234, 26, 39, 0.08), transparent, rgba(255, 212, 0, 0.06), transparent);
+    animation: specialtyRotate 8s linear infinite;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.light .specialty-card:hover::before { opacity: 1; }
+@keyframes specialtyRotate {
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Scroll Reveal Enhanced --- */
+.light .reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.light .reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.light .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.light .reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+.light .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.light .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Section Tag Glow --- */
+.light .section-tag {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.light .section-tag:hover {
+    box-shadow: 0 0 20px rgba(234, 26, 39, 0.3);
+    border-color: rgba(234, 26, 39, 0.5);
+}
+
+/* --- Price Tag 3D Pop --- */
+.light .price-tag {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.light .price-tag:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 16px 32px rgba(255, 184, 0, 0.55);
+}
+
+/* --- Navbar Scroll Shadow --- */
+.light .navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Footer Gradient Top Border --- */
+.light .footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ea1a27, #ffd400, #ea1a27);
+}
+
+/* --- Smooth Section Transitions --- */
+.light section {
+    position: relative;
+}
+
+/* --- Testimonial Card Hover --- */
+.light .testimonial-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.light .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(234, 26, 39, 0.12);
+}
+
+/* --- Features Icon Bounce --- */
+.light .feature-icon {
+    transition: transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1);
+}
+.light .feature-card:hover .feature-icon {
+    transform: scale(1.15) translateY(-4px);
+}
+
+/* --- FAQ Item Enhanced --- */
+.light .faq-item {
+    transition: box-shadow 0.3s ease;
+}
+.light .faq-item:hover {
+    box-shadow: 0 8px 25px rgba(234, 26, 39, 0.08);
+}
+
+/* --- Contact Card Hover --- */
+.light .contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.light .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(234, 26, 39, 0.1);
+}
+
+/* --- Mobile Enhancements --- */
+@media (max-width: 768px) {
+    .light .deal-card:hover { transform: none; }
+    .light .deal-card:active { transform: scale(0.98); }
+    .light .menu-item:active .menu-img-3d { transform: scale(0.97); }
+    .light .hero-media::before { display: none; }
+    .light .hero-media::after { display: none; }
+}
 
 
 
