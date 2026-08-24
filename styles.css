@@ -1404,7 +1404,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .cta-banner {
     position: relative;
     padding: 100px 0;
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
     background-size: 400% 400%;
     animation: ctaGradient 8s ease infinite;
     overflow: hidden;
@@ -1419,7 +1419,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     top: 50%; left: 50%;
     width: 700px; height: 700px;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(234, 26, 39, 0.2), transparent 65%);
+    background: radial-gradient(circle, rgba(234, 26, 39, 0.25), transparent 65%);
     pointer-events: none;
     animation: ctaPulse 4s ease-in-out infinite;
 }
@@ -1442,7 +1442,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .cta-particles span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; animation-duration: 7s; }
 .cta-particles span:nth-child(2) { left: 25%; top: 70%; animation-delay: 1s; animation-duration: 5s; width: 4px; height: 4px; }
-.cta-particles span:nth-child(3) { left: 55%; top: 15%; animation-delay: 2s; animation-duration: 8s; width: 8px; height: 8px; background: rgba(234, 26, 39, 0.4); }
+.cta-particles span:nth-child(3) { left: 55%; top: 15%; animation-delay: 2s; animation-duration: 8s; width: 8px; height: 8px; background: rgba(234, 26, 39, 0.5); }
 .cta-particles span:nth-child(4) { left: 75%; top: 65%; animation-delay: 0.5s; animation-duration: 6s; }
 .cta-particles span:nth-child(5) { left: 90%; top: 35%; animation-delay: 3s; animation-duration: 9s; width: 5px; height: 5px; }
 @keyframes ctaFloat {
@@ -1511,10 +1511,10 @@ input, textarea, select { font-family: inherit; outline: none; }
     display: flex;
     align-items: center;
     gap: 25px;
-    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b);
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
     background-size: 300% 300%;
     animation: loyaltyGradient 6s ease infinite;
-    border: 1px solid rgba(255, 212, 0, 0.25);
+    border: 1px solid rgba(234, 26, 39, 0.3);
     border-radius: 20px;
     padding: 32px 38px;
     flex-wrap: wrap;
@@ -1526,7 +1526,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     position: absolute;
     top: 0; left: -75%;
     width: 50%; height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 212, 0, 0.12), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 212, 0, 0.1), transparent);
     transform: skewX(-20deg);
     animation: loyaltyShine 4s ease-in-out infinite;
 }
@@ -1543,7 +1543,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     border-radius: 50%;
     background: linear-gradient(135deg, #ffd400, #ffb800);
     display: flex; align-items: center; justify-content: center;
-    color: #1e1b4b; font-size: 1.7rem;
+    color: #1a1a1a; font-size: 1.7rem;
     box-shadow: 0 0 30px rgba(255, 212, 0, 0.4);
     position: relative;
     z-index: 2;
@@ -1566,7 +1566,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .loyalty-btn {
     white-space: nowrap;
     background: linear-gradient(135deg, #ffd400, #ffb800) !important;
-    color: #1e1b4b !important;
+    color: #1a1a1a !important;
     font-weight: 700;
     border-radius: 999px !important;
     padding: 14px 32px;
@@ -2324,16 +2324,16 @@ html.light { background: #f3f4f6; }
 /* Loyalty */
 .light .loyalty-banner { background: transparent; }
 .light .loyalty-inner {
-    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b);
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
     background-size: 300% 300%;
-    border-color: rgba(255, 212, 0, 0.3);
+    border-color: rgba(234, 26, 39, 0.3);
 }
 .light .loyalty-text h3 { color: #ffd400; }
 .light .loyalty-text p { color: rgba(255, 255, 255, 0.85); }
 
 /* CTA */
 .light .cta-banner {
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
     background-size: 400% 400%;
     animation: ctaGradient 8s ease infinite;
 }
@@ -2597,21 +2597,21 @@ html.light { background: #f3f4f6; }
 .light .form-textarea:focus { border-color: #ea1a27; box-shadow: 0 0 0 3px rgba(13,90,191,0.12); }
 .light .form-label { color: #374151; }
 
-/* Loyalty banner -> dark indigo */
+/* Loyalty banner -> dark */
 .light .loyalty-banner { background: transparent; }
 .light .loyalty-inner {
-    background: linear-gradient(135deg, #1e1b4b, #312e81, #1e1b4b) !important;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a) !important;
     background-size: 300% 300% !important;
     animation: loyaltyGradient 6s ease infinite;
-    border-color: rgba(255, 212, 0, 0.3) !important;
+    border-color: rgba(234, 26, 39, 0.3) !important;
 }
 .light .loyalty-text h3 { color: #ffd400; }
 .light .loyalty-text p { color: rgba(255, 255, 255, 0.85); }
-.light .loyalty-btn { background: linear-gradient(135deg, #ffd400, #ffb800) !important; color: #1e1b4b !important; border-radius: 999px; font-weight: 700; }
+.light .loyalty-btn { background: linear-gradient(135deg, #ffd400, #ffb800) !important; color: #1a1a1a !important; border-radius: 999px; font-weight: 700; }
 
 /* CTA banner -> dark animated gradient */
 .light .cta-banner {
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a) !important;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a) !important;
     background-size: 400% 400% !important;
     animation: ctaGradient 8s ease infinite;
 }
