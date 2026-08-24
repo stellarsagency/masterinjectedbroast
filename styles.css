@@ -1185,11 +1185,16 @@ input, textarea, select { font-family: inherit; outline: none; }
 .menu-img-3d {
     width: 100%; height: 100%;
     overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu-img {
     width: 100%; height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
+    padding: 10px;
 }
 .menu-item:hover .menu-img {
     transform: scale(1.08);
