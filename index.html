@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#ea1a27">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍗</text></svg>">
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
     <link rel="stylesheet" href="image3d.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -39,23 +39,17 @@
 
     <!-- Preloader -->
     <div class="preloader" id="preloader">
-            <div class="loader-content">
-                <img src="images/loader.png" alt="Master Injected Broast" class="loader-logo"
-                     onload="document.getElementById('preloader').classList.add('has-img')"
-                     onerror="this.style.display='none'">
-                <div class="loader-drumstick">
-                <div class="drumstick-piece"></div>
-                <div class="drumstick-piece"></div>
-                <div class="drumstick-piece"></div>
+        <div class="loader-content">
+            <div class="loader-logo-wrap">
+                <div class="loader-ring"></div>
+                <div class="loader-ring loader-ring-2"></div>
+                <img src="images/Logo.png" alt="Master Injected Broast" class="loader-logo">
             </div>
             <div class="loader-text">
-                <span class="loader-letter" style="--i:0">M</span>
-                <span class="loader-letter" style="--i:1">A</span>
-                <span class="loader-letter" style="--i:2">S</span>
-                <span class="loader-letter" style="--i:3">T</span>
-                <span class="loader-letter" style="--i:4">E</span>
-                <span class="loader-letter" style="--i:5">R</span>
+                <span class="loader-word">MASTER INJECTED</span>
+                <span class="loader-word loader-word-sub">BROAST</span>
             </div>
+            <div class="loader-tagline">Injected with Flavor, Fried to Perfection</div>
             <div class="loader-bar">
                 <div class="loader-progress"></div>
             </div>
@@ -73,21 +67,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon-wrapper">
-                    <div class="logo-icon">
-                        <svg viewBox="0 0 60 60" class="logo-svg">
-                            <circle cx="30" cy="30" r="28" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
-                            <path d="M30 8 L35 25 L52 30 L35 35 L30 52 L25 35 L8 30 L25 25 Z" fill="url(#goldGradient)"/>
-                            <defs>
-                                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#ea1a27"/>
-                                    <stop offset="50%" style="stop-color:#f0424f"/>
-                                    <stop offset="100%" style="stop-color:#ea1a27"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
+                <img src="images/Logo.png" alt="Master Injected Broast" class="logo-img">
                 <div class="logo-text-wrapper">
                     <span class="logo-main">MASTER INJECTED</span>
                     <span class="logo-sub">BROAST</span>
@@ -971,19 +951,7 @@
             <div class="footer-grid">
                 <div class="footer-col brand-col">
                     <a href="#" class="footer-logo">
-                        <div class="logo-icon">
-                            <svg viewBox="0 0 60 60" class="logo-svg">
-                                <circle cx="30" cy="30" r="28" fill="none" stroke="url(#goldGradient2)" stroke-width="2"/>
-                                <path d="M30 8 L35 25 L52 30 L35 35 L30 52 L25 35 L8 30 L25 25 Z" fill="url(#goldGradient2)"/>
-                                <defs>
-                                    <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#ea1a27"/>
-                                        <stop offset="50%" style="stop-color:#f0424f"/>
-                                        <stop offset="100%" style="stop-color:#ea1a27"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
+                        <img src="images/Logo.png" alt="Master Injected Broast" class="footer-logo-img">
                         <div class="logo-text">
                             <span class="logo-main">MASTER INJECTED</span>
                             <span class="logo-sub">BROAST</span>
