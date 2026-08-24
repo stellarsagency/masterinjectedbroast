@@ -148,14 +148,14 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* Logo with spinning rings */
 .loader-logo-wrap {
     position: relative;
-    width: 160px; height: 160px;
+    width: 190px; height: 190px;
     margin: 0 auto 32px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .loader-logo {
-    width: 100px; height: 100px;
+    width: 120px; height: 120px;
     object-fit: contain;
     position: relative;
     z-index: 2;
@@ -213,7 +213,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     font-size: 0.75rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.5);
     margin-bottom: 30px;
 }
 
@@ -298,7 +298,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo-img {
-    width: 48px; height: 48px;
+    width: 58px; height: 58px;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(234, 26, 39, 0.3));
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -2016,6 +2016,9 @@ input, textarea, select { font-family: inherit; outline: none; }
     .hero-cta { flex-direction: column; align-items: center; }
     .hero-content { padding: 100px 20px 40px; }
     .navbar { padding: 22px 0; }
+    .logo-img { width: 48px; height: 48px; }
+    .logo-main { font-size: 0.85rem; }
+    .logo-sub { font-size: 0.5rem; letter-spacing: 3px; }
     .hero-badge { margin-bottom: 26px; }
     .about-content { padding-left: 0; }
     .about-image-3d::before, .about-image-3d::after { display: none; }
@@ -2049,10 +2052,15 @@ input, textarea, select { font-family: inherit; outline: none; }
     .hero-stats { gap: 16px; }
     .hero-content { padding: 92px 16px 30px; }
     .navbar { padding: 18px 0; }
-    .stat-item { padding-top: 14px; }
-    .hero::after { width: 360px; height: 360px; left: 50%; top: 38%; }
-    .logo-main { font-size: 0.82rem; }
-    .logo-sub { font-size: 0.55rem; letter-spacing: 3px; }
+    .logo-img { width: 40px; height: 40px; }
+    .logo-main { font-size: 0.75rem; }
+    .logo-sub { font-size: 0.45rem; letter-spacing: 2.5px; }
+    .loader-logo-wrap { width: 120px; height: 120px; }
+    .loader-logo { width: 70px; height: 70px; }
+    .loader-word { font-size: 1.2rem; letter-spacing: 4px; }
+    .loader-word-sub { font-size: 1.6rem; letter-spacing: 8px; }
+    .loader-tagline { font-size: 0.6rem; letter-spacing: 2px; }
+    .loader-bar { width: 160px; }
     .nav-right { gap: 10px; }
     .nav-right .order-btn { padding: 8px 13px; font-size: 0.65rem; }
     .cta-title { font-size: 1.9rem; }
@@ -2393,7 +2401,7 @@ html.light { background: #f3f4f6; }
 .light .mobile-order-bar .mob-btn { color: #fff; }
 .light .preloader { background: #ffffff; }
 .light .loader-word { color: #111827; }
-.light .loader-tagline { color: rgba(0,0,0,0.3); }
+.light .loader-tagline { color: rgba(0,0,0,0.65); font-weight: 500; }
 .light .loader-bar { background: rgba(0,0,0,0.08); }
 .light .loader-progress { background: linear-gradient(90deg, #ea1a27, #ffd400, #ea1a27); }
 .light .loader-logo { filter: drop-shadow(0 0 20px rgba(234, 26, 39, 0.3)); }
@@ -2689,7 +2697,7 @@ html.light { background: #f3f4f6; }
 .light .mob-call { background: linear-gradient(135deg, #ea1a27, #b3121d); }
 .light .preloader { background: #ffffff; }
 .light .loader-word { color: #111827; }
-.light .loader-tagline { color: rgba(0,0,0,0.3); }
+.light .loader-tagline { color: rgba(0,0,0,0.65); font-weight: 500; }
 .light .loader-bar { background: rgba(0,0,0,0.08); }
 .light .loader-progress { background: linear-gradient(90deg, #ea1a27, #ffd400, #ea1a27); }
 .light .loader-logo { filter: drop-shadow(0 0 20px rgba(234, 26, 39, 0.3)); }
