@@ -3330,27 +3330,138 @@ html:not(.light) .theme-toggle .fa-sun { opacity: 1; transform: rotate(0deg) sca
 
 /* ============================================================
    DARK MODE THEME (default = dark, .light = light)
+   Same layout as light mode, just dark colors
    ============================================================ */
 
 /* -- Base -- */
 html:not(.light) { color-scheme: dark; }
 html:not(.light) body {
-    background: #0a0a0a;
+    background: #111;
     color: #e5e7eb;
 }
+html:not(.light) .bg-cinematic { display: none; }
+html:not(.light) .bg-overlay { display: none; }
+
+/* -- Hero: same two-column layout as light -- */
+html:not(.light) .hero-bg { display: none; }
+html:not(.light) .hero::after { display: none; }
+html:not(.light) .scroll-indicator { display: none; }
+html:not(.light) .hero {
+    min-height: auto;
+    padding: 150px 0 70px;
+    background: #111;
+    display: block;
+}
+html:not(.light) .hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+html:not(.light) .hero-content { max-width: 560px; flex: 1; padding: 0; }
+html:not(.light) .hero-badge {
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #ea1a27;
+    border-radius: 999px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+html:not(.light) .hero-badge::before { background: #ea1a27; box-shadow: 0 0 8px rgba(234,26,39,0.6); }
+html:not(.light) .badge-line-1 { color: #ea1a27; letter-spacing: 2px; font-size: 0.78rem; }
+html:not(.light) .hero-title { margin-bottom: 22px; }
+html:not(.light) .title-line .word { color: #ffffff; font-size: 3.6rem; letter-spacing: 1px; }
+html:not(.light) .line-2 .word {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: #ea1a27;
+    color: #ea1a27;
+    filter: none;
+    font-size: 4.8rem;
+}
+html:not(.light) .hero-subtitle { color: #9ca3af; margin-bottom: 30px; }
+html:not(.light) .hero-cta { gap: 14px; margin-bottom: 40px; }
+html:not(.light) .btn { border-radius: 999px; padding: 15px 32px; }
+html:not(.light) .btn-primary {
+    background: linear-gradient(135deg, #ea1a27, #c8101c);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(234,26,39,0.35);
+}
+html:not(.light) .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(234,26,39,0.45); }
+html:not(.light) .btn-secondary {
+    background: #ffd400;
+    border: 2px solid #ffd400;
+    color: #111;
+    box-shadow: 0 6px 18px rgba(255, 212, 0, 0.35);
+}
+html:not(.light) .btn-secondary:hover { background: #ffb800; border-color: #ffb800; color: #111; transform: translateY(-3px); }
+html:not(.light) .hero-stats { gap: 34px; }
+html:not(.light) .stat-number { color: #ea1a27; font-weight: 700; }
+html:not(.light) .stat-label { color: #9ca3af; font-size: 0.85rem; }
+html:not(.light) .stat-item { padding-top: 12px; position: relative; }
+html:not(.light) .stat-item::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 28px; height: 3px;
+    background: #ffd400; border-radius: 2px;
+}
+html:not(.light) .hero-media { flex: 1; position: relative; min-width: 0; }
+html:not(.light) .hero-media-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+html:not(.light) .hero-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(26,26,26,0.95);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: chipFloat 3.5s ease-in-out infinite;
+}
+html:not(.light) .hero-chip i { color: #ea1a27; }
+html:not(.light) .chip-1 { top: 18px; left: -14px; }
+html:not(.light) .chip-2 { bottom: 60px; right: -10px; animation-delay: 0.6s; }
+html:not(.light) .chip-3 { bottom: -14px; left: 30px; animation-delay: 1.2s; }
+html:not(.light) .chip-3 i { color: #ea1a27; }
 
 /* -- Navbar -- */
 html:not(.light) .navbar {
-    background: rgba(5, 5, 5, 0.95);
+    background: rgba(17, 17, 17, 0.95);
     backdrop-filter: blur(20px);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.3);
 }
+html:not(.light) .navbar.scrolled { background: rgba(17, 17, 17, 0.98); }
 html:not(.light) .navbar::after {
     background: linear-gradient(90deg, #ea1a27, #ffd400);
 }
-html:not(.light) .logo-main,
-html:not(.light) .logo-sub { color: #ffffff; }
+html:not(.light) .logo-main { color: #ffffff; }
+html:not(.light) .logo-sub { color: #ffd400; }
+html:not(.light) .nav-links a { color: #d1d5db; font-weight: 500; }
+html:not(.light) .nav-links a:hover, html:not(.light) .nav-links a.active { color: #ea1a27; }
+html:not(.light) .nav-links a::after { background: #ea1a27; height: 2px; }
+html:not(.light) .nav-right .order-btn {
+    background: linear-gradient(135deg, #ea1a27, #c8101c);
+    color: #fff;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(234,26,39,0.3);
+}
+html:not(.light) .hamburger span { background: #ffffff; }
 
-/* -- Sections -- */
+/* -- Sections: solid dark bg -- */
 html:not(.light) .about,
 html:not(.light) .specialties,
 html:not(.light) .deals,
@@ -3361,8 +3472,9 @@ html:not(.light) .order,
 html:not(.light) .contact,
 html:not(.light) .fries,
 html:not(.light) .drinks {
-    background: #0a0a0a;
+    background: #1a1a1a !important;
 }
+html:not(.light) p { color: #d1d5db; }
 
 /* -- Section Headers -- */
 html:not(.light) .section-title { color: #ffffff; }
@@ -3376,9 +3488,14 @@ html:not(.light) .section-header::after {
     background: linear-gradient(90deg, #ea1a27, #ffd400);
 }
 
+/* -- About -- */
+html:not(.light) .about-text { color: #d1d5db; }
+html:not(.light) .experience-badge { background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+html:not(.light) .experience-badge .badge-years { color: #ffd400; }
+
 /* -- Specialty Cards -- */
 html:not(.light) .specialty-card {
-    background: rgba(17, 24, 39, 0.8);
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
 html:not(.light) .specialty-card h3 { color: #ffffff; }
@@ -3387,7 +3504,7 @@ html:not(.light) .icon-main { color: #ea1a27; }
 
 /* -- Deal Cards -- */
 html:not(.light) .deal-card {
-    background: #111111;
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
 html:not(.light) .deal-name { color: #ffffff; }
@@ -3396,27 +3513,27 @@ html:not(.light) .deal-features li { color: #d1d5db; }
 html:not(.light) .deal-features li i { color: #22c55e; }
 html:not(.light) .price-tag .amount { color: #ffd400; }
 html:not(.light) .price-tag .currency { color: #ffd400; }
-html:not(.light) .deal-header { background: #1a1a1a; }
-html:not(.light) .deal-image-3d { background: #1a1a1a; }
+html:not(.light) .deal-header { background: #111; }
+html:not(.light) .deal-image-3d { background: #111; }
 
 /* -- Menu Items -- */
 html:not(.light) .menu-item {
-    background: #0a0a0a;
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
-html:not(.light) .menu-img-3d { background: #0a0a0a; }
+html:not(.light) .menu-img-3d { background: #fff; }
 html:not(.light) .item-content h4 { color: #ffffff; }
 html:not(.light) .item-content p { color: #9ca3af; }
 html:not(.light) .item-price { color: #ffd400; }
 
 /* -- Gallery -- */
 html:not(.light) .gallery-item { border-color: rgba(255, 255, 255, 0.06); }
-html:not(.light) .gallery-img { background: #1a1a1a; }
+html:not(.light) .gallery-img { background: #fff; }
 html:not(.light) .gallery-overlay span { color: #ffffff; }
 
 /* -- Testimonials -- */
 html:not(.light) .review-card {
-    background: #111111;
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
 html:not(.light) .review-text { color: #d1d5db; }
@@ -3426,14 +3543,14 @@ html:not(.light) .review-stars i { color: #ffd400; }
 
 /* -- Contact -- */
 html:not(.light) .contact-card {
-    background: #111111;
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
 html:not(.light) .contact-card h4 { color: #ffffff; }
 html:not(.light) .contact-card p { color: #9ca3af; }
 html:not(.light) .form-input,
 html:not(.light) .form-textarea {
-    background: #1a1a1a;
+    background: #111;
     border-color: rgba(255, 255, 255, 0.1);
     color: #e5e7eb;
 }
@@ -3441,7 +3558,7 @@ html:not(.light) .form-label { color: #d1d5db; }
 
 /* -- FAQ -- */
 html:not(.light) .faq-item {
-    background: #111111;
+    background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.06);
 }
 html:not(.light) .faq-question { color: #ffffff; }
@@ -3455,7 +3572,7 @@ html:not(.light) .loyalty-text h3 { color: #ffd400; }
 html:not(.light) .loyalty-text p { color: rgba(255, 255, 255, 0.75); }
 
 /* -- Footer -- */
-html:not(.light) .footer { background: #050505; }
+html:not(.light) .footer { background: #0a0a0a; }
 html:not(.light) .footer-logo .logo-main { color: #ffffff; }
 html:not(.light) .footer-desc { color: #9ca3af; }
 html:not(.light) .footer-links li a { color: #9ca3af; }
@@ -3467,38 +3584,30 @@ html:not(.light) .footer-bottom { border-color: rgba(255, 255, 255, 0.06); }
 html:not(.light) .footer-bottom p { color: #6b7280; }
 
 /* -- Modal -- */
-html:not(.light) .dish-modal-card { background: #111111; }
+html:not(.light) .dish-modal-card { background: #1a1a1a; }
 html:not(.light) .dish-modal-body h3 { color: #ffffff; }
 html:not(.light) .dish-modal-body p { color: #9ca3af; }
 
 /* -- Features Strip -- */
-html:not(.light) .features-strip { background: rgba(17, 24, 39, 0.6); }
+html:not(.light) .features-strip { background: #111 !important; }
 html:not(.light) .strip-item span { color: #d1d5db; }
 
-/* -- Hero -- */
-html:not(.light) .hero-title .word { color: #ffffff; }
-html:not(.light) .hero-subtitle { color: #d1d5db; }
-html:not(.light) .hero-badge { background: rgba(234, 26, 39, 0.15); border-color: rgba(234, 26, 39, 0.3); }
-html:not(.light) .badge-line-1 { color: #ea1a27; }
-html:not(.light) .stat-item span { color: #ffffff; }
-html:not(.light) .stat-label { color: #9ca3af; }
-
 /* -- Watermark -- */
-html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.08); }
+html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.06); }
 
 /* -- Preloader -- */
-html:not(.light) .preloader { background: #0a0a0a; }
+html:not(.light) .preloader { background: #111; }
 html:not(.light) .loader-word { color: #ffffff; }
 
 /* -- Mobile Order Bar -- */
-html:not(.light) .mobile-order-bar { background: rgba(10, 10, 10, 0.95); }
+html:not(.light) .mobile-order-bar { background: rgba(17, 17, 17, 0.95); }
 
 /* -- Back to top -- */
 html:not(.light) .back-to-top { background: #ea1a27; color: #ffffff; }
 
 /* -- Scrollbar -- */
 html:not(.light) ::-webkit-scrollbar { width: 8px; }
-html:not(.light) ::-webkit-scrollbar-track { background: #0a0a0a; }
+html:not(.light) ::-webkit-scrollbar-track { background: #111; }
 html:not(.light) ::-webkit-scrollbar-thumb { background: #ea1a27; border-radius: 4px; }
 
 /* ============================================================
@@ -3507,4 +3616,17 @@ html:not(.light) ::-webkit-scrollbar-thumb { background: #ea1a27; border-radius:
 @media (max-width: 768px) {
     html:not(.light) .theme-toggle { width: 34px; height: 34px; font-size: 0.8rem; }
     html:not(.light) .deal-card.featured:hover { transform: translateY(-10px); }
+    html:not(.light) .hero-inner { flex-direction: column; gap: 36px; text-align: center; }
+    html:not(.light) .hero-content { max-width: 100%; }
+    html:not(.light) .hero-media { width: 100%; max-width: 480px; margin: 0 auto; }
+    html:not(.light) .hero-cta { justify-content: center; }
+    html:not(.light) .hero-stats { justify-content: center; }
+    html:not(.light) .hero { padding: 120px 0 50px; }
+    html:not(.light) .hero-chip { font-size: 0.7rem; padding: 8px 12px; }
+    html:not(.light) .title-line .word { font-size: 2.4rem; }
+    html:not(.light) .line-2 .word { font-size: 3rem; }
+}
+@media (max-width: 480px) {
+    html:not(.light) .hero { padding: 108px 0 44px; }
+    html:not(.light) .hero-chip { font-size: 0.7rem; padding: 8px 12px; }
 }
