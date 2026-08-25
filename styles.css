@@ -3361,7 +3361,7 @@ html:not(.light) .order,
 html:not(.light) .contact,
 html:not(.light) .fries,
 html:not(.light) .drinks {
-    background: transparent;
+    background: #0a0a0a;
 }
 
 /* -- Section Headers -- */
@@ -3401,10 +3401,10 @@ html:not(.light) .deal-image-3d { background: #1a1a1a; }
 
 /* -- Menu Items -- */
 html:not(.light) .menu-item {
-    background: #111111;
+    background: #0a0a0a;
     border-color: rgba(255, 255, 255, 0.06);
 }
-html:not(.light) .menu-img-3d { background: #1a1a1a; }
+html:not(.light) .menu-img-3d { background: #0a0a0a; }
 html:not(.light) .item-content h4 { color: #ffffff; }
 html:not(.light) .item-content p { color: #9ca3af; }
 html:not(.light) .item-price { color: #ffd400; }
@@ -3484,7 +3484,7 @@ html:not(.light) .stat-item span { color: #ffffff; }
 html:not(.light) .stat-label { color: #9ca3af; }
 
 /* -- Watermark -- */
-html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.03); }
+html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.08); }
 
 /* -- Preloader -- */
 html:not(.light) .preloader { background: #0a0a0a; }
