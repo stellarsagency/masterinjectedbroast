@@ -3505,7 +3505,7 @@ html:not(.light) .specialty-card {
 }
 html:not(.light) .specialty-card h3 { color: #ffffff; }
 html:not(.light) .specialty-card p { color: #9ca3af; }
-html:not(.light) .icon-main { color: #ea1a27; }
+html:not(.light) .icon-main { background: linear-gradient(135deg, #ffd400, #ea1a27); color: #ffffff; }
 
 /* -- Deal Cards -- */
 html:not(.light) .deal-card {
