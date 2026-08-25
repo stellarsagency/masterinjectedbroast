@@ -3339,8 +3339,13 @@ html:not(.light) body {
     background: #111;
     color: #e5e7eb;
 }
-html:not(.light) .bg-cinematic { display: none; }
-html:not(.light) .bg-overlay { display: none; }
+html:not(.light) .bg-cinematic { display: block; opacity: 0.25; }
+html:not(.light) .bg-overlay {
+    display: block;
+    background:
+        radial-gradient(circle at 50% 28%, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.85) 72%),
+        linear-gradient(180deg, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.85));
+}
 
 /* -- Hero: same two-column layout as light -- */
 html:not(.light) .hero-bg { display: none; }
