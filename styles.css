@@ -3461,7 +3461,7 @@ html:not(.light) .nav-right .order-btn {
 }
 html:not(.light) .hamburger span { background: #ffffff; }
 
-/* -- Sections: solid dark bg -- */
+/* -- Sections: semi-transparent dark bg so watermark shows -- */
 html:not(.light) .about,
 html:not(.light) .specialties,
 html:not(.light) .deals,
@@ -3472,7 +3472,7 @@ html:not(.light) .order,
 html:not(.light) .contact,
 html:not(.light) .fries,
 html:not(.light) .drinks {
-    background: #1a1a1a !important;
+    background: rgba(26, 26, 26, 0.88) !important;
 }
 html:not(.light) p { color: #d1d5db; }
 
@@ -3593,7 +3593,7 @@ html:not(.light) .features-strip { background: #111 !important; }
 html:not(.light) .strip-item span { color: #d1d5db; }
 
 /* -- Watermark -- */
-html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.06); }
+html:not(.light) .bg-brand span { color: rgba(255, 255, 255, 0.12); }
 
 /* -- Preloader -- */
 html:not(.light) .preloader { background: #111; }
