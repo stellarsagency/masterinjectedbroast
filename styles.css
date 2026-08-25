@@ -3334,18 +3334,13 @@ html:not(.light) .theme-toggle .fa-sun { opacity: 1; transform: rotate(0deg) sca
    ============================================================ */
 
 /* -- Base -- */
-html:not(.light) { color-scheme: dark; background: transparent; }
+html:not(.light) { color-scheme: dark; background: #111; }
 html:not(.light) body {
-    background: transparent;
+    background: #111;
     color: #e5e7eb;
 }
-html:not(.light) .bg-cinematic { display: block; opacity: 0.15; filter: blur(2px) saturate(1.15); }
-html:not(.light) .bg-overlay {
-    display: block;
-    background:
-        radial-gradient(circle at 50% 28%, rgba(17, 17, 17, 0.3), rgba(17, 17, 17, 0.75) 72%),
-        linear-gradient(180deg, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.85));
-}
+html:not(.light) .bg-cinematic { display: none; }
+html:not(.light) .bg-overlay { display: none; }
 
 /* -- Hero: same two-column layout as light -- */
 html:not(.light) .hero-bg { display: none; }
@@ -3466,7 +3461,7 @@ html:not(.light) .nav-right .order-btn {
 }
 html:not(.light) .hamburger span { background: #ffffff; }
 
-/* -- Sections: semi-transparent so cinematic bg + watermark show -- */
+/* -- Sections: clean dark bg so content looks even -- */
 html:not(.light) .about,
 html:not(.light) .specialties,
 html:not(.light) .deals,
@@ -3477,7 +3472,7 @@ html:not(.light) .order,
 html:not(.light) .contact,
 html:not(.light) .fries,
 html:not(.light) .drinks {
-    background: rgba(17, 17, 17, 0.55) !important;
+    background: rgba(17, 17, 17, 0.92) !important;
 }
 html:not(.light) p { color: #d1d5db; }
 
