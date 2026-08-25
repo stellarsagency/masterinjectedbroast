@@ -1194,6 +1194,8 @@ input, textarea, select { font-family: inherit; outline: none; }
 .menu-img {
     width: 100%;
     display: block;
+    object-fit: contain;
+    background: #ffffff;
     transition: transform 0.5s ease;
 }
 .menu-item:hover .menu-img {
