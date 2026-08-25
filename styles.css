@@ -3349,7 +3349,7 @@ html:not(.light) .scroll-indicator { display: none; }
 html:not(.light) .hero {
     min-height: auto;
     padding: 150px 0 70px;
-    background: transparent;
+    background: #111;
     display: block;
 }
 html:not(.light) .hero-inner {
