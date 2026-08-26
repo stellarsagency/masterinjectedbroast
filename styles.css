@@ -2789,7 +2789,7 @@ html.light { background: #ffffff; }
     line-height: 1;
     letter-spacing: 3px;
     white-space: nowrap;
-    color: rgba(17, 24, 39, 0.35);
+    color: rgba(17, 24, 39, 0.50);
 }
 .bg-brand span:nth-child(even) { margin-left: -14vw; }
 
@@ -2801,12 +2801,12 @@ html.light { background: #ffffff; }
     background-size: 440px auto;
     background-repeat: repeat;
     background-position: center;
-    opacity: 0.30;
+    opacity: 0.50;
     filter: grayscale(100%) contrast(1.05);
 }
 
 /* Clearer grey words – some rows upside down */
-.bg-brand span { color: rgba(17, 24, 39, 0.35); }
+.bg-brand span { color: rgba(17, 24, 39, 0.50); }
 .bg-brand span:nth-child(3),
 .bg-brand span:nth-child(5),
 .bg-brand span:nth-child(7) { transform: rotate(180deg); }
