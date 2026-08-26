@@ -1162,6 +1162,16 @@ input, textarea, select { font-family: inherit; outline: none; }
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
+#menu .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+}
+#fries .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+}
 .menu-item {
     background: var(--black);
     border-radius: var(--border-radius);
