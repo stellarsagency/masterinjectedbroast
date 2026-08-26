@@ -73,7 +73,7 @@ body {
     100% { transform: scale(1.16) translate(-2%, -2.5%); }
 }
 /* Let the cinematic show through content sections */
-.about, .specialties, .deals, .menu, .gallery, .testimonials, .order, .features, .cta-banner {
+.about, .specialties, .deals, .menu, .gallery, .testimonials, .order, .features, .cta-banner, .fries, .drinks {
     background: #111;
 }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -2823,6 +2823,8 @@ html.light { background: #ffffff; }
 .light .gallery,
 .light .faq,
 .light .loyalty,
+.light .fries,
+.light .drinks,
 .light #deals,
 .light #menu,
 .light .hero {
@@ -3166,13 +3168,13 @@ html.light { background: #ffffff; }
     position: absolute;
     top: -50%; left: -50%;
     width: 200%; height: 200%;
-    background: conic-gradient(from 0deg, transparent, rgba(234, 26, 39, 0.08), transparent, rgba(255, 212, 0, 0.06), transparent);
+    background: conic-gradient(from 0deg, transparent, #ea1a27, transparent, #ffd400, transparent);
     animation: specialtyRotate 8s linear infinite;
     z-index: 0;
     opacity: 0;
     transition: opacity 0.4s ease;
 }
-.light .specialty-card:hover::before { opacity: 1; }
+.light .specialty-card:hover::before { opacity: 0.15; }
 @keyframes specialtyRotate {
     100% { transform: rotate(360deg); }
 }
