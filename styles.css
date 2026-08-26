@@ -2283,14 +2283,10 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 html.light { background: #f3f4f6; }
 .light .bg-cinematic {
-    display: block;
-    opacity: 0.12;
+    display: none;
 }
 .light .bg-overlay {
-    display: block;
-    background:
-        radial-gradient(circle at 50% 28%, rgba(243, 244, 246, 0.3), rgba(243, 244, 246, 0.75) 72%),
-        linear-gradient(180deg, rgba(243, 244, 246, 0.7), rgba(243, 244, 246, 0.85));
+    display: none;
 }
 
 /* Navbar */
@@ -2773,6 +2769,7 @@ html.light { background: #f3f4f6; }
    sections on the whole white background (scroll parallax)
    ============================================================ */
 html.light { background: #ffffff; }
+html.light .bg-brand { display: none; }
 
 .bg-brand {
     position: fixed;
@@ -3122,8 +3119,10 @@ html.light { background: #ffffff; }
 
 /* --- Brand Watermark Enhanced --- */
 .light .bg-brand span {
-    font-weight: 700;
-    text-shadow: 0 2px 20px rgba(234, 26, 39, 0.04);
+    display: none;
+}
+.light .bg-broast {
+    display: none;
 }
 
 /* --- About Section 3D Card --- */
@@ -3237,6 +3236,7 @@ html.light { background: #ffffff; }
 /* --- Smooth Section Transitions --- */
 .light section {
     position: relative;
+    z-index: 2;
 }
 
 /* --- Testimonial Card Hover --- */
