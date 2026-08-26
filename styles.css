@@ -3440,11 +3440,11 @@ html:not(.light) .chip-3 i { color: #ea1a27; }
 
 /* -- Navbar -- */
 html:not(.light) .navbar {
-    background: rgba(17, 17, 17, 0.95);
+    background: #111;
     backdrop-filter: blur(20px);
     box-shadow: 0 2px 14px rgba(0,0,0,0.3);
 }
-html:not(.light) .navbar.scrolled { background: rgba(17, 17, 17, 0.98); }
+html:not(.light) .navbar.scrolled { background: #111; }
 html:not(.light) .navbar::after {
     background: linear-gradient(90deg, #ea1a27, #ffd400);
 }
@@ -3472,7 +3472,7 @@ html:not(.light) .order,
 html:not(.light) .contact,
 html:not(.light) .fries,
 html:not(.light) .drinks {
-    background: rgba(17, 17, 17, 0.92) !important;
+    background: #111 !important;
 }
 html:not(.light) p { color: #d1d5db; }
 
@@ -3600,7 +3600,7 @@ html:not(.light) .preloader { background: #111; }
 html:not(.light) .loader-word { color: #ffffff; }
 
 /* -- Mobile Order Bar -- */
-html:not(.light) .mobile-order-bar { background: rgba(17, 17, 17, 0.95); }
+html:not(.light) .mobile-order-bar { background: #111; }
 
 /* -- Back to top -- */
 html:not(.light) .back-to-top { background: #ea1a27; color: #ffffff; }
