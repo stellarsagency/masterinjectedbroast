@@ -79,7 +79,7 @@ body {
     background: #111 !important;
 }
 .fries, .drinks {
-    background: rgba(255,255,255,0.93) !important;
+    background: rgba(255,255,255,0.88) !important;
 }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
@@ -2306,8 +2306,8 @@ html.light { background: #f3f4f6; }
 .light .btn-secondary:hover { background: var(--golden); color: #fff; }
 
 /* Hero */
-.light .hero { background: rgba(255,255,255,0.93); }
-.light .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.93) 45%, rgba(255,255,255,0.93) 100%); }
+.light .hero { background: rgba(255,255,255,0.88); }
+.light .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.88) 100%); }
 .light .hero-title { text-shadow: none; }
 .light .hero-subtitle { color: #4b5563; }
 .light .hero-badge { background: rgba(13,90,191,0.08); border-color: rgba(13,90,191,0.25); }
@@ -2323,7 +2323,7 @@ html.light { background: #f3f4f6; }
 .light .gallery,
 .light .faq,
 .light .loyalty,
-.light .features-strip { background: rgba(255,255,255,0.93) !important; }
+.light .features-strip { background: rgba(255,255,255,0.88) !important; }
 .light .section-subtitle { color: #6a7282; }
 .light .section-title { color: #0a0a0a; }
 .light p { color: #374151; }
@@ -2575,8 +2575,8 @@ html.light { background: #f3f4f6; }
 .light .specialties,
 .light .testimonials,
 .light .order,
-.light .gallery { background: rgba(255,255,255,0.93) !important; }
-.light .faq { background: rgba(255,255,255,0.93) !important; }
+.light .gallery { background: rgba(255,255,255,0.88) !important; }
+.light .faq { background: rgba(255,255,255,0.88) !important; }
 .light .loyalty { background: transparent !important; }
 .light .features-strip { background: #ffffff !important; border-bottom: 1px solid #eef0f3; }
 .light .section-title { color: #111827; }
@@ -2732,7 +2732,7 @@ html.light { background: #f3f4f6; }
     --shadow-golden: 0 10px 40px rgba(234, 26, 39, 0.18);
     background: #ffffff !important;
 }
-.light #deals { background: rgba(255,255,255,0.93) !important; }
+.light #deals { background: rgba(255,255,255,0.88) !important; }
 .light #deals .section-title,
 .light #menu .section-title { color: #111827; }
 .light #deals .section-subtitle,
@@ -2789,7 +2789,7 @@ html.light { background: #ffffff; }
     line-height: 1;
     letter-spacing: 3px;
     white-space: nowrap;
-    color: rgba(17, 24, 39, 0.05);
+    color: rgba(17, 24, 39, 0.15);
 }
 .bg-brand span:nth-child(even) { margin-left: -14vw; }
 
@@ -2801,12 +2801,12 @@ html.light { background: #ffffff; }
     background-size: 440px auto;
     background-repeat: repeat;
     background-position: center;
-    opacity: 0.075;
+    opacity: 0.12;
     filter: grayscale(100%) contrast(1.05);
 }
 
-/* Clearer grey words � some rows upside down */
-.bg-brand span { color: rgba(17, 24, 39, 0.08); }
+/* Clearer grey words – some rows upside down */
+.bg-brand span { color: rgba(17, 24, 39, 0.15); }
 .bg-brand span:nth-child(3),
 .bg-brand span:nth-child(5),
 .bg-brand span:nth-child(7) { transform: rotate(180deg); }
@@ -2825,13 +2825,13 @@ html.light { background: #ffffff; }
 .light #deals,
 .light #menu,
 .light .hero {
-    background: rgba(255,255,255,0.93) !important;
+    background: rgba(255,255,255,0.88) !important;
 }
 .light .fries,
 .light .drinks {
     background: #ffffff !important;
 }
-.light .features-strip { background: rgba(255,255,255,0.93) !important; }
+.light .features-strip { background: rgba(255,255,255,0.88) !important; }
 @media (max-width: 768px) {
     .bg-brand span { font-size: clamp(2.6rem, 13vw, 5rem); }
 }
