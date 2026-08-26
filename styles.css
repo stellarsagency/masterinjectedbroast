@@ -865,7 +865,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     padding: 40px 30px;
     background: var(--black-light);
     border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: none;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -2346,7 +2346,7 @@ html.light { background: #f3f4f6; }
 
 /* Feature / specialty cards */
 .light .feature-card,
-.light .specialty-card { background: #f7f8fa; border: 1px solid #e5e7eb; }
+.light .specialty-card { background: #f7f8fa; border: none; }
 .light .feature-card:hover,
 .light .specialty-card:hover { border-color: var(--golden); }
 
@@ -2647,7 +2647,7 @@ html.light { background: #f3f4f6; }
 .light .faq-item summary { color: #111827; }
 .light .faq-item summary::after { color: #ea1a27; }
 .light .feature-card,
-.light .specialty-card { background: #ffffff; border: 1px solid #eef0f3; border-radius: 18px; box-shadow: 0 8px 26px rgba(17,24,39,0.07); }
+.light .specialty-card { background: #ffffff; border: none; border-radius: 18px; box-shadow: 0 8px 26px rgba(17,24,39,0.07); }
 .light .experience-badge { background: #ffffff; border: 1px solid #eef0f3; border-radius: 16px; }
 .light .gallery-item { border-radius: 16px; }
 
@@ -3503,7 +3503,7 @@ html:not(.light) .experience-badge .badge-years { color: #ffd400; }
 /* -- Specialty Cards -- */
 html:not(.light) .specialty-card {
     background: #1a1a1a;
-    border-color: rgba(255, 255, 255, 0.06);
+    border: none;
 }
 html:not(.light) .specialty-card h3 { color: #ffffff; }
 html:not(.light) .specialty-card p { color: #9ca3af; }
