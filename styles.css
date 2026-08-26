@@ -2837,6 +2837,10 @@ html.light { background: #ffffff; }
 .light .hero {
     background: transparent !important;
 }
+.light .fries,
+.light .drinks {
+    background: #ffffff !important;
+}
 .light .features-strip { background: transparent !important; }
 @media (max-width: 768px) {
     .bg-brand span { font-size: clamp(2.6rem, 13vw, 5rem); }
