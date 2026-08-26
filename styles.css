@@ -863,7 +863,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .specialty-card {
     text-align: center;
     padding: 40px 30px;
-    background: var(--black-light);
+    background: #ffffff;
     border-radius: var(--border-radius);
     border: none;
     transition: var(--transition);
@@ -871,13 +871,7 @@ input, textarea, select { font-family: inherit; outline: none; }
     overflow: hidden;
 }
 .specialty-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, var(--golden), var(--red), var(--golden));
-    transform: scaleX(0);
-    transition: var(--transition);
+    display: none;
 }
 .specialty-card:hover::before { transform: scaleX(1); }
 .specialty-card:hover {
@@ -3174,18 +3168,7 @@ html.light { background: #ffffff; }
     position: relative;
     overflow: hidden;
 }
-.light .specialty-card::before {
-    content: '';
-    position: absolute;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: conic-gradient(from 0deg, transparent, rgba(234, 26, 39, 0.08), transparent, rgba(255, 212, 0, 0.06), transparent);
-    animation: specialtyRotate 8s linear infinite;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-.light .specialty-card:hover::before { opacity: 1; }
+.light .specialty-card::before { display: none; }
 @keyframes specialtyRotate {
     100% { transform: rotate(360deg); }
 }
