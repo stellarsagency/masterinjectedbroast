@@ -2310,8 +2310,8 @@ html.light { background: #f3f4f6; }
 .light .btn-secondary:hover { background: var(--golden); color: #fff; }
 
 /* Hero */
-.light .hero { background: transparent; }
-.light .hero-overlay { background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.35) 100%); }
+.light .hero { background: #ffffff; }
+.light .hero-overlay { background: linear-gradient(90deg, #ffffff 0%, #ffffff 45%, #ffffff 100%); }
 .light .hero-title { text-shadow: none; }
 .light .hero-subtitle { color: #4b5563; }
 .light .hero-badge { background: rgba(13,90,191,0.08); border-color: rgba(13,90,191,0.25); }
@@ -2327,7 +2327,7 @@ html.light { background: #f3f4f6; }
 .light .gallery,
 .light .faq,
 .light .loyalty,
-.light .features-strip { background: rgba(255,255,255,0.4) !important; }
+.light .features-strip { background: #ffffff !important; }
 .light .section-subtitle { color: #6a7282; }
 .light .section-title { color: #0a0a0a; }
 .light p { color: #374151; }
@@ -2579,8 +2579,8 @@ html.light { background: #f3f4f6; }
 .light .specialties,
 .light .testimonials,
 .light .order,
-.light .gallery { background: rgba(255,255,255,0.5) !important; }
-.light .faq { background: rgba(255,255,255,0.5) !important; }
+.light .gallery { background: #ffffff !important; }
+.light .faq { background: #ffffff !important; }
 .light .loyalty { background: transparent !important; }
 .light .features-strip { background: #ffffff !important; border-bottom: 1px solid #eef0f3; }
 .light .section-title { color: #111827; }
@@ -2736,7 +2736,7 @@ html.light { background: #f3f4f6; }
     --shadow-golden: 0 10px 40px rgba(234, 26, 39, 0.18);
     background: #ffffff !important;
 }
-.light #deals { background: rgba(255,255,255,0.4) !important; }
+.light #deals { background: #ffffff !important; }
 .light #deals .section-title,
 .light #menu .section-title { color: #111827; }
 .light #deals .section-subtitle,
@@ -2829,13 +2829,13 @@ html.light { background: #ffffff; }
 .light #deals,
 .light #menu,
 .light .hero {
-    background: transparent !important;
+    background: #ffffff !important;
 }
 .light .fries,
 .light .drinks {
     background: #ffffff !important;
 }
-.light .features-strip { background: transparent !important; }
+.light .features-strip { background: #ffffff !important; }
 @media (max-width: 768px) {
     .bg-brand span { font-size: clamp(2.6rem, 13vw, 5rem); }
 }
