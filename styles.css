@@ -3516,7 +3516,7 @@ html:not(.light) .item-price { color: #ffd400; }
 
 /* -- Gallery -- */
 html:not(.light) .gallery-item { border-color: rgba(255, 255, 255, 0.06); }
-html:not(.light) .gallery-img { background: #fff; }
+html:not(.light) .gallery-img { background: transparent; }
 html:not(.light) .gallery-overlay span { color: #ffffff; }
 
 /* -- Testimonials -- */
