@@ -2769,12 +2769,11 @@ html.light { background: #f3f4f6; }
    sections on the whole white background (scroll parallax)
    ============================================================ */
 html.light { background: #ffffff; }
-html.light .bg-brand { display: none; }
 
 .bg-brand {
     position: fixed;
     inset: -12% 0;
-    z-index: 1;
+    z-index: -1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -3119,10 +3118,8 @@ html.light .bg-brand { display: none; }
 
 /* --- Brand Watermark Enhanced --- */
 .light .bg-brand span {
-    display: none;
-}
-.light .bg-broast {
-    display: none;
+    font-weight: 700;
+    text-shadow: 0 2px 20px rgba(234, 26, 39, 0.04);
 }
 
 /* --- About Section 3D Card --- */
